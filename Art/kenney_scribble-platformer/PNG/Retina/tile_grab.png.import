@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cd5ainr3orkw8"
-path="res://.godot/imported/tile_grab.png-421f712d0d592e0453f9b2eb3c9d5367.ctex"
+path="res://.godot/imported/tile_grab.png-c1ee335ebe307d510936eae353139d3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Retina/tile_grab.png"
-dest_files=["res://.godot/imported/tile_grab.png-421f712d0d592e0453f9b2eb3c9d5367.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Retina/tile_grab.png"
+dest_files=["res://.godot/imported/tile_grab.png-c1ee335ebe307d510936eae353139d3d.ctex"]
 
 [params]
 

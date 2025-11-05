@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyaoqsamh1hnw"
-path="res://.godot/imported/ui_numX.png-a5bd48f9579c4ce32b8f996f1a5e5c22.ctex"
+path="res://.godot/imported/ui_numX.png-276abf28574c951b84c1005bdb756336.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Retina/ui_numX.png"
-dest_files=["res://.godot/imported/ui_numX.png-a5bd48f9579c4ce32b8f996f1a5e5c22.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Retina/ui_numX.png"
+dest_files=["res://.godot/imported/ui_numX.png-276abf28574c951b84c1005bdb756336.ctex"]
 
 [params]
 

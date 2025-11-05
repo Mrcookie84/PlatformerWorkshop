@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3gq5icsr36rg"
-path="res://.godot/imported/background_cloudB.png-e7b21d0c43582ec708cda93f3f6f00ec.ctex"
+path="res://.godot/imported/background_cloudB.png-596dfc745b04cc516133a3514b5d999c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Retina/background_cloudB.png"
-dest_files=["res://.godot/imported/background_cloudB.png-e7b21d0c43582ec708cda93f3f6f00ec.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Retina/background_cloudB.png"
+dest_files=["res://.godot/imported/background_cloudB.png-596dfc745b04cc516133a3514b5d999c.ctex"]
 
 [params]
 

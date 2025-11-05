@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0rpu1ljwd0ul"
-path="res://.godot/imported/tile_flag.png-f0a1152b9041bcfc407a1212c3650327.ctex"
+path="res://.godot/imported/tile_flag.png-239be8976609a23deb126340f9209586.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Retina/tile_flag.png"
-dest_files=["res://.godot/imported/tile_flag.png-f0a1152b9041bcfc407a1212c3650327.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Retina/tile_flag.png"
+dest_files=["res://.godot/imported/tile_flag.png-239be8976609a23deb126340f9209586.ctex"]
 
 [params]
 

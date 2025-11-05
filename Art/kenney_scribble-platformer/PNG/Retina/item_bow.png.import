@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1hprftrn4kdd"
-path="res://.godot/imported/item_bow.png-2a27cb9c8899dc9c0b369079e4363a8d.ctex"
+path="res://.godot/imported/item_bow.png-8038a4c18a4c0045cd9031d6482317c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Retina/item_bow.png"
-dest_files=["res://.godot/imported/item_bow.png-2a27cb9c8899dc9c0b369079e4363a8d.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Retina/item_bow.png"
+dest_files=["res://.godot/imported/item_bow.png-8038a4c18a4c0045cd9031d6482317c7.ctex"]
 
 [params]
 

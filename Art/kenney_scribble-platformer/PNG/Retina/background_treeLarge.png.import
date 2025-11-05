@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drvwyxwpde7xi"
-path="res://.godot/imported/background_treeLarge.png-c53b4465e4b5c67d9af2e0e3ba6664d3.ctex"
+path="res://.godot/imported/background_treeLarge.png-380f107af572da36ffa776a58260b53c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Retina/background_treeLarge.png"
-dest_files=["res://.godot/imported/background_treeLarge.png-c53b4465e4b5c67d9af2e0e3ba6664d3.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Retina/background_treeLarge.png"
+dest_files=["res://.godot/imported/background_treeLarge.png-380f107af572da36ffa776a58260b53c.ctex"]
 
 [params]
 

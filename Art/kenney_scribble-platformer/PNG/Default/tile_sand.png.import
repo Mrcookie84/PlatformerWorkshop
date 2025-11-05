@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://x3cifskr3e5n"
-path="res://.godot/imported/tile_sand.png-a9af1f276782a1a9c74aa777b5868038.ctex"
+path="res://.godot/imported/tile_sand.png-f658d38270bb411208fcf41c4dbfed93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Default/tile_sand.png"
-dest_files=["res://.godot/imported/tile_sand.png-a9af1f276782a1a9c74aa777b5868038.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Default/tile_sand.png"
+dest_files=["res://.godot/imported/tile_sand.png-f658d38270bb411208fcf41c4dbfed93.ctex"]
 
 [params]
 

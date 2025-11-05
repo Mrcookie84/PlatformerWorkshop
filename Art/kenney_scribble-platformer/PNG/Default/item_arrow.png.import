@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://by078to8uu2d2"
-path="res://.godot/imported/item_arrow.png-12bc9bc7259b910a560fbd48cc4933f6.ctex"
+path="res://.godot/imported/item_arrow.png-eea925409cbc17c8e524c1f6fb8d5d6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Default/item_arrow.png"
-dest_files=["res://.godot/imported/item_arrow.png-12bc9bc7259b910a560fbd48cc4933f6.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Default/item_arrow.png"
+dest_files=["res://.godot/imported/item_arrow.png-eea925409cbc17c8e524c1f6fb8d5d6b.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1f604p6b88f1"
-path="res://.godot/imported/ui_numPeriod.png-8470e782c3c47b30edbd071425010be4.ctex"
+path="res://.godot/imported/ui_numPeriod.png-2fcbb44d83e9d2437ad304ac9f83da9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Default/ui_numPeriod.png"
-dest_files=["res://.godot/imported/ui_numPeriod.png-8470e782c3c47b30edbd071425010be4.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Default/ui_numPeriod.png"
+dest_files=["res://.godot/imported/ui_numPeriod.png-2fcbb44d83e9d2437ad304ac9f83da9a.ctex"]
 
 [params]
 

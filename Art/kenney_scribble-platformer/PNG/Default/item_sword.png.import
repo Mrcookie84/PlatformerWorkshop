@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lfprjk64q4b2"
-path="res://.godot/imported/item_sword.png-52b4a40e8490fb2946b41d144bad49cf.ctex"
+path="res://.godot/imported/item_sword.png-da1afc587a06c143f8f3698134885885.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Default/item_sword.png"
-dest_files=["res://.godot/imported/item_sword.png-52b4a40e8490fb2946b41d144bad49cf.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Default/item_sword.png"
+dest_files=["res://.godot/imported/item_sword.png-da1afc587a06c143f8f3698134885885.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgfs5kvuafpax"
-path="res://.godot/imported/tile_chest.png-f467e9de1a1b65e788b152157a99f97d.ctex"
+path="res://.godot/imported/tile_chest.png-1af661c7784a5fab3e3fa7c85ecb23da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Retina/tile_chest.png"
-dest_files=["res://.godot/imported/tile_chest.png-f467e9de1a1b65e788b152157a99f97d.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Retina/tile_chest.png"
+dest_files=["res://.godot/imported/tile_chest.png-1af661c7784a5fab3e3fa7c85ecb23da.ctex"]
 
 [params]
 

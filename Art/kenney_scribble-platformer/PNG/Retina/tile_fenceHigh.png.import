@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://iidop5mulmru"
-path="res://.godot/imported/tile_fenceHigh.png-253094145fea098675862bf9fcf83029.ctex"
+path="res://.godot/imported/tile_fenceHigh.png-ec1381e11cfeb4977e647eef0b851914.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Retina/tile_fenceHigh.png"
-dest_files=["res://.godot/imported/tile_fenceHigh.png-253094145fea098675862bf9fcf83029.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Retina/tile_fenceHigh.png"
+dest_files=["res://.godot/imported/tile_fenceHigh.png-ec1381e11cfeb4977e647eef0b851914.ctex"]
 
 [params]
 
