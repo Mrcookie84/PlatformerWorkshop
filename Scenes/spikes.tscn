@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://wxpsautupfoo"]
+
+[ext_resource type="Script" uid="uid://7gw540qli483" path="res://Scripts/spikes.gd" id="1_gwqs2"]
+[ext_resource type="Texture2D" uid="uid://wrftb8th11vl" path="res://Art/kenney_scribble-platformer/PNG/Default/tile_spikes.png" id="2_gwqs2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m37uh"]
+size = Vector2(63, 32)
+
+[node name="Spikes" type="Area2D" groups=["obstacles"]]
+script = ExtResource("1_gwqs2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 15)
+shape = SubResource("RectangleShape2D_m37uh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gwqs2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

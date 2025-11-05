@@ -22,9 +22,9 @@ window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
-[dotnet]
+[global_group]
 
-project/assembly_name="PlatformerWorkshop"
+obstacles=""
 
 [input]
 

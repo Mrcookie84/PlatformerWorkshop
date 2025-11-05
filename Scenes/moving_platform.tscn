@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfu526pw0u2rg"]
+
+[ext_resource type="Script" uid="uid://wm6mn0h6lq8y" path="res://Scripts/moving_platform.gd" id="1_0773j"]
+[ext_resource type="Texture2D" uid="uid://b11dtt840gseo" path="res://Art/kenney_scribble-platformer/PNG/Default/tile_grass.png" id="2_anqd2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_anqd2"]
+size = Vector2(256, 64)
+
+[node name="MovingPlatform" type="AnimatableBody2D"]
+script = ExtResource("1_0773j")
+SPEED = 200.0
+end = Vector2(500, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_anqd2")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="GoundEndLeft" type="Sprite2D" parent="Node2D"]
+position = Vector2(-96, 0)
+texture = ExtResource("2_anqd2")
+
+[node name="GroundCentral" type="Sprite2D" parent="Node2D"]
+position = Vector2(-32, 0)
+texture = ExtResource("2_anqd2")
+
+[node name="GroundCentral2" type="Sprite2D" parent="Node2D"]
+position = Vector2(32, 0)
+texture = ExtResource("2_anqd2")
+
+[node name="GroundEndRight" type="Sprite2D" parent="Node2D"]
+position = Vector2(96, 0)
+texture = ExtResource("2_anqd2")
