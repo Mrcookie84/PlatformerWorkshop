@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhawyeobqieal"]
+
+[ext_resource type="Texture2D" uid="uid://0ohaeddae13g" path="res://Art/Sprite/tile.png" id="1_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://bm4e1iwn6aast" path="res://Can copy from/Scenes/wall.tscn" id="2_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://2w0343gbnmdk" path="res://Scenes/player.tscn" id="3_wrm1d"]
+
+[node name="Game" type="Node"]
+
+[node name="World" type="Node" parent="."]
+
+[node name="Map" type="Node" parent="World"]
+
+[node name="Parallax2D" type="Parallax2D" parent="World/Map"]
+scroll_scale = Vector2(1.25, 1.25)
+scroll_offset = Vector2(154, 38)
+
+[node name="BG" type="Sprite2D" parent="World/Map/Parallax2D"]
+texture_repeat = 2
+position = Vector2(-4, 27)
+texture = ExtResource("1_qxrlw")
+region_enabled = true
+region_rect = Rect2(-8561.966, -5229, 10000.508, 10000)
+
+[node name="Wall" parent="World/Map" instance=ExtResource("2_wrm1d")]
+position = Vector2(63.99994, 597.9999)
+scale = Vector2(310.51538, 21.317245)
+
+[node name="Player" parent="World/Map" instance=ExtResource("3_wrm1d")]
+position = Vector2(74, 412)

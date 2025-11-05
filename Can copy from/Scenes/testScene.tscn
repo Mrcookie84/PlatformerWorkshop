@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bdm8ujjwnlgt7"]
+
+[ext_resource type="Script" uid="uid://buuxens33w3s7" path="res://Scripts/Player.gd" id="1_5lntk"]
+[ext_resource type="Texture2D" uid="uid://0l81vyqx5nd7" path="res://Art/Sprite/player.png" id="2_w2vy6"]
+[ext_resource type="Texture2D" uid="uid://c4noo55dw8qy7" path="res://Art/Sprite/player_projectile.png" id="3_u1fn3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wxu4w"]
+radius = 61.008198
+
+[sub_resource type="Curve" id="Curve_aq4tv"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), -0.06669082, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_c3fdh"]
+colors = PackedColorArray(0, 0, 0, 0, 0.2901961, 0.65882355, 0.8745098, 1)
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("anchor")]
+motion_mode = 1
+script = ExtResource("1_5lntk")
+anchor = NodePath("projectileAnchor")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_w2vy6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wxu4w")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(1, 1)
+points = PackedVector2Array(-170, -398, -79, -398, 19, -398, 131, -398, 259, -398, 519, -398)
+width = 25.0
+width_curve = SubResource("Curve_aq4tv")
+default_color = Color(0.2901961, 0.65882355, 0.8745098, 1)
+gradient = SubResource("Gradient_c3fdh")
+
+[node name="projectileAnchor" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="projectileAnchor"]
+position = Vector2(116, 0)
+texture = ExtResource("3_u1fn3")

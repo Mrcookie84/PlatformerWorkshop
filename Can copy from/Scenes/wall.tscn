@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm4e1iwn6aast"]
+
+[ext_resource type="Texture2D" uid="uid://dn4j4qtsx1pnt" path="res://Art/Sprite/wall.png" id="1_d155t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxf2c"]
+size = Vector2(10.49011, 8.426482)
+
+[node name="Wall" type="StaticBody2D" groups=["obstacles"]]
+texture_repeat = 2
+scale = Vector2(11.63, 11.63)
+disable_mode = 2
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.08598459, -1.4862728e-07)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_qxf2c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_repeat = 2
+scale = Vector2(0.032, 0.1)
+texture = ExtResource("1_d155t")
