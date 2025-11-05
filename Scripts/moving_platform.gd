@@ -1,17 +1,17 @@
-extends CharacterBody2D
+extends AnimatableBody2D
 
 @export var SPEED: float
-@export var directionX: float
-@export var directionY: float
+@export var start: Vector2
+@export var end: Vector2
 
-var direction: Vector2
+var back: bool = false
 
 func _physics_process(delta: float) -> void:
-	if velocity.x != directionX and velocity.y != directionY:
-		velocity.x = move_toward(velocity.x, directionX, SPEED)
-		velocity.y = move_toward(velocity.y, directionY, SPEED)
-	else:
-		velocity.x = move_toward(velocity.x, -directionX, SPEED)
-		velocity.y = move_toward(velocity.y, -directionY, SPEED)
-	
-	move_and_slide()
+	if !back:
+		global_position = global_position.move_toward(end, SPEED * delta)
+		if global_position == end:
+			back = !back
+	elif back:
+		global_position = global_position.move_toward(start, SPEED * delta)
+		if global_position == start:
+			back = !back
