@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dinperlahhsbl"
-path="res://.godot/imported/tile_slope.png-21784b6087f5407dfc8f7b640be9f5c3.ctex"
+path="res://.godot/imported/tile_slope.png-14feb784d6498f8cf38bb2e884cd9e90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Default/tile_slope.png"
-dest_files=["res://.godot/imported/tile_slope.png-21784b6087f5407dfc8f7b640be9f5c3.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Default/tile_slope.png"
+dest_files=["res://.godot/imported/tile_slope.png-14feb784d6498f8cf38bb2e884cd9e90.ctex"]
 
 [params]
 

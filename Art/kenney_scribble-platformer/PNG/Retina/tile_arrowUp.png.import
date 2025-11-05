@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2mevww8bwdjm"
-path="res://.godot/imported/tile_arrowUp.png-a7a10cf38d006e1c39f9c6919e668354.ctex"
+path="res://.godot/imported/tile_arrowUp.png-e6ff123fc101764876bc02d0666b617d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Retina/tile_arrowUp.png"
-dest_files=["res://.godot/imported/tile_arrowUp.png-a7a10cf38d006e1c39f9c6919e668354.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Retina/tile_arrowUp.png"
+dest_files=["res://.godot/imported/tile_arrowUp.png-e6ff123fc101764876bc02d0666b617d.ctex"]
 
 [params]
 

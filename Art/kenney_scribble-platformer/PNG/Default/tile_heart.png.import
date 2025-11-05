@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cadn4awu0xhf4"
-path="res://.godot/imported/tile_heart.png-8aee9226b02890e234c48d73feb3668e.ctex"
+path="res://.godot/imported/tile_heart.png-3e936327d248e30365a686987eb23df8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Default/tile_heart.png"
-dest_files=["res://.godot/imported/tile_heart.png-8aee9226b02890e234c48d73feb3668e.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Default/tile_heart.png"
+dest_files=["res://.godot/imported/tile_heart.png-3e936327d248e30365a686987eb23df8.ctex"]
 
 [params]
 

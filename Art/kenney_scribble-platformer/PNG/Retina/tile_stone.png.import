@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duihcq2dju34w"
-path="res://.godot/imported/tile_stone.png-c9e2539fe65f1727c881ebf0f676d3ee.ctex"
+path="res://.godot/imported/tile_stone.png-37ca9e30a9d792a5ac8658b039e89525.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Retina/tile_stone.png"
-dest_files=["res://.godot/imported/tile_stone.png-c9e2539fe65f1727c881ebf0f676d3ee.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Retina/tile_stone.png"
+dest_files=["res://.godot/imported/tile_stone.png-37ca9e30a9d792a5ac8658b039e89525.ctex"]
 
 [params]
 

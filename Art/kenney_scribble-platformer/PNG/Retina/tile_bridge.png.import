@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5eblr07x7dpf"
-path="res://.godot/imported/tile_bridge.png-da01999719be5514e945ff2eb68c7cd7.ctex"
+path="res://.godot/imported/tile_bridge.png-05ab2cc4db3ae54b273e3580871d1cb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Retina/tile_bridge.png"
-dest_files=["res://.godot/imported/tile_bridge.png-da01999719be5514e945ff2eb68c7cd7.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Retina/tile_bridge.png"
+dest_files=["res://.godot/imported/tile_bridge.png-05ab2cc4db3ae54b273e3580871d1cb9.ctex"]
 
 [params]
 

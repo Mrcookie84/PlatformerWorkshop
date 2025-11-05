@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://h1bvmsrdmap0"
-path="res://.godot/imported/item_hatTop.png-f5c67cbf439c26f9fcf15cc171a75835.ctex"
+path="res://.godot/imported/item_hatTop.png-4444b64e6801a1d6b7072d8a28834f6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Retina/item_hatTop.png"
-dest_files=["res://.godot/imported/item_hatTop.png-f5c67cbf439c26f9fcf15cc171a75835.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Retina/item_hatTop.png"
+dest_files=["res://.godot/imported/item_hatTop.png-4444b64e6801a1d6b7072d8a28834f6a.ctex"]
 
 [params]
 

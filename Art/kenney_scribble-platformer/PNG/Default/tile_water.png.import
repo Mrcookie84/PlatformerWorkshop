@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1501un3tc3gw"
-path="res://.godot/imported/tile_water.png-a7f889785219df6d37dd7836ce7ff57e.ctex"
+path="res://.godot/imported/tile_water.png-196dc0227c64ab5e3381104475fb7a6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Default/tile_water.png"
-dest_files=["res://.godot/imported/tile_water.png-a7f889785219df6d37dd7836ce7ff57e.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Default/tile_water.png"
+dest_files=["res://.godot/imported/tile_water.png-196dc0227c64ab5e3381104475fb7a6c.ctex"]
 
 [params]
 

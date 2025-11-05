@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://44k7xk6q2e3s"
-path="res://.godot/imported/tile_archHalf.png-0485fbc6a3766b26954fbda75c626552.ctex"
+path="res://.godot/imported/tile_archHalf.png-241b01a436883551657c2c5bc7793d04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Default/tile_archHalf.png"
-dest_files=["res://.godot/imported/tile_archHalf.png-0485fbc6a3766b26954fbda75c626552.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Default/tile_archHalf.png"
+dest_files=["res://.godot/imported/tile_archHalf.png-241b01a436883551657c2c5bc7793d04.ctex"]
 
 [params]
 

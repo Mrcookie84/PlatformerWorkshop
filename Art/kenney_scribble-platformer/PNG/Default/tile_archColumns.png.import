@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqkpxikuut2hn"
-path="res://.godot/imported/tile_archColumns.png-a3ea66e542a8dd230ef51a03fe7c30b2.ctex"
+path="res://.godot/imported/tile_archColumns.png-b7ff30b8b7204b8dff3e7d20923adabd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Default/tile_archColumns.png"
-dest_files=["res://.godot/imported/tile_archColumns.png-a3ea66e542a8dd230ef51a03fe7c30b2.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Default/tile_archColumns.png"
+dest_files=["res://.godot/imported/tile_archColumns.png-b7ff30b8b7204b8dff3e7d20923adabd.ctex"]
 
 [params]
 

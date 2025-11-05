@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lvabua53vht8"
-path="res://.godot/imported/tile_spike.png-46818b9f7aab4ae079d2eeb2c78e91fc.ctex"
+path="res://.godot/imported/tile_spike.png-c542e1f7a2a93a49ee2c649f512c02dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Default/tile_spike.png"
-dest_files=["res://.godot/imported/tile_spike.png-46818b9f7aab4ae079d2eeb2c78e91fc.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Default/tile_spike.png"
+dest_files=["res://.godot/imported/tile_spike.png-c542e1f7a2a93a49ee2c649f512c02dc.ctex"]
 
 [params]
 

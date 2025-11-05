@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ca65d6md3ytus"
-path="res://.godot/imported/character_squareYellow.png-7842ffec822facf09f58c35c627b42fd.ctex"
+path="res://.godot/imported/character_squareYellow.png-ab4ecb2d705582168741792cff5140ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Default/character_squareYellow.png"
-dest_files=["res://.godot/imported/character_squareYellow.png-7842ffec822facf09f58c35c627b42fd.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Default/character_squareYellow.png"
+dest_files=["res://.godot/imported/character_squareYellow.png-ab4ecb2d705582168741792cff5140ed.ctex"]
 
 [params]
 

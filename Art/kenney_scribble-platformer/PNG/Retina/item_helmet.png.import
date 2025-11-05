@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bruen8fycjbla"
-path="res://.godot/imported/item_helmet.png-0a3441fc728a48934e823108e87fd607.ctex"
+path="res://.godot/imported/item_helmet.png-ea8fe7ad9da99cd8cc10f28b043835bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Retina/item_helmet.png"
-dest_files=["res://.godot/imported/item_helmet.png-0a3441fc728a48934e823108e87fd607.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Retina/item_helmet.png"
+dest_files=["res://.godot/imported/item_helmet.png-ea8fe7ad9da99cd8cc10f28b043835bf.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7a1iipykp7ir"
-path="res://.godot/imported/background_cloudA.png-4dd431bc4de4e33a1c0a2a1ad841156d.ctex"
+path="res://.godot/imported/background_cloudA.png-c7eb35b55951003690b508e0c9eba9ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Default/background_cloudA.png"
-dest_files=["res://.godot/imported/background_cloudA.png-4dd431bc4de4e33a1c0a2a1ad841156d.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Default/background_cloudA.png"
+dest_files=["res://.godot/imported/background_cloudA.png-c7eb35b55951003690b508e0c9eba9ca.ctex"]
 
 [params]
 

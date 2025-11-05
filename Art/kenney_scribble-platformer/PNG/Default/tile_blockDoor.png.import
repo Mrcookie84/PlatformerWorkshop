@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbq36no7aap7y"
-path="res://.godot/imported/tile_blockDoor.png-55e77dbff1b183f0323b60cd1eb8f959.ctex"
+path="res://.godot/imported/tile_blockDoor.png-ae0184804b47d9a04b0344b4613b0b82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Default/tile_blockDoor.png"
-dest_files=["res://.godot/imported/tile_blockDoor.png-55e77dbff1b183f0323b60cd1eb8f959.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Default/tile_blockDoor.png"
+dest_files=["res://.godot/imported/tile_blockDoor.png-ae0184804b47d9a04b0344b4613b0b82.ctex"]
 
 [params]
 

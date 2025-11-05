@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7ghp0h5metun"
-path="res://.godot/imported/tile_crateSmall.png-96c7678ccb38e61c8da5f2dc7e1c51ab.ctex"
+path="res://.godot/imported/tile_crateSmall.png-8b3c577b1e02e6737b0c25c14c684fd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_scribble-platformer/PNG/Retina/tile_crateSmall.png"
-dest_files=["res://.godot/imported/tile_crateSmall.png-96c7678ccb38e61c8da5f2dc7e1c51ab.ctex"]
+source_file="res://Art/kenney_scribble-platformer/PNG/Retina/tile_crateSmall.png"
+dest_files=["res://.godot/imported/tile_crateSmall.png-8b3c577b1e02e6737b0c25c14c684fd6.ctex"]
 
 [params]
 
