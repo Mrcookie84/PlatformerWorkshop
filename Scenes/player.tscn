@@ -1,34 +1,77 @@
-[gd_scene load_steps=7 format=3 uid="uid://2w0343gbnmdk"]
+[gd_scene load_steps=13 format=3 uid="uid://2w0343gbnmdk"]
 
 [ext_resource type="Script" uid="uid://buuxens33w3s7" path="res://Scripts/Player.gd" id="1_fobbg"]
+[ext_resource type="Script" uid="uid://bn4echo7iqi4o" path="res://Scripts/rig.gd" id="2_8erm5"]
 [ext_resource type="Texture2D" uid="uid://0l81vyqx5nd7" path="res://Art/Sprite/player.png" id="2_hqtel"]
 [ext_resource type="Texture2D" uid="uid://1i112jgjiwam" path="res://Art/Sprite/neutral_projectile.png" id="3_6t5aa"]
 [ext_resource type="Script" uid="uid://bn4echo7iqi4o" path="res://Scripts/PlayerSpriteScript.gd" id="3_fkybt"]
 [ext_resource type="PackedScene" uid="uid://4qox140xfhaq" path="res://Scenes/ui.tscn" id="5_fkybt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wxu4w"]
-radius = 61.008198
+radius = 126.14278
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("health_bar", "DashTimer", "player_sprite") groups=["player"]]
+[sub_resource type="Animation" id="Animation_gymyn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rig/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_hqtel")]
+}
+
+[sub_resource type="Animation" id="Animation_pu2lt"]
+resource_name = "walking_forward"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rig/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_8erm5"), ExtResource("6_f1ek2"), ExtResource("5_8erm5"), ExtResource("7_tx1dd"), ExtResource("5_8erm5")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ukyrk"]
+_data = {
+&"RESET": SubResource("Animation_gymyn"),
+&"walking": SubResource("Animation_pu2lt")
+}
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("health_bar", "DashTimer", "player_sprite", "animator") groups=["player"]]
+texture_filter = 1
 collision_mask = 6
 script = ExtResource("1_fobbg")
 health_bar = NodePath("UI/healthbar")
 DashTimer = NodePath("DashTimer")
-player_sprite = NodePath("Sprite2D")
+player_sprite = NodePath("Rig/Sprite2D")
+animator = NodePath("AnimationPlayer")
 
-[node name="Sprite2D" type="Sprite2D" parent="." node_paths=PackedStringArray("player")]
-texture = ExtResource("2_hqtel")
-script = ExtResource("3_fkybt")
+[node name="Rig" type="Node2D" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("2_8erm5")
 player = NodePath("..")
 
-[node name="projectileAnchor" type="Node2D" parent="Sprite2D"]
+[node name="projectileAnchor" type="Node2D" parent="Rig"]
 
-[node name="bulletEmplacement" type="Marker2D" parent="Sprite2D/projectileAnchor"]
+[node name="bulletEmplacement" type="Marker2D" parent="Rig/projectileAnchor"]
 position = Vector2(116, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/projectileAnchor"]
-position = Vector2(121, 0)
+[node name="Sprite2D" type="Sprite2D" parent="Rig/projectileAnchor"]
+position = Vector2(194, 0)
 texture = ExtResource("3_6t5aa")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rig"]
+position = Vector2(0, -36)
+scale = Vector2(6, 6)
+texture = ExtResource("2_hqtel")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_wxu4w")
@@ -41,6 +84,9 @@ wait_time = 0.5
 one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ukyrk")
+}
 
 [node name="Camera2D2" type="Camera2D" parent="."]
 scale = Vector2(3.1620297, 2.2040493)

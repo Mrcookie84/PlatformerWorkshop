@@ -26,6 +26,7 @@ var sprint_can_be_true:bool = true
 
 @export_group("player art")
 @export var player_sprite:Sprite2D
+@export var animator:AnimationPlayer
 
 func _ready() -> void:
 	health_bar.max_value = max_health
@@ -42,6 +43,8 @@ func _update_health_bar():
 
 func _physics_process(delta: float) -> void:
 	var input_dir := Vector2(Input.get_axis("Backward", "Forward"), 0)
+	if input_dir != null:
+		animator.play("walking")
 	
 	# Mouvement horizontal
 	velocity.x = lerp(velocity.x, input_dir.x * speed, delta * 10.0)
