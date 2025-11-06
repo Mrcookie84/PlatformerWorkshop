@@ -55,9 +55,9 @@ func _physics_process(delta: float) -> void:
 	
 	if input_dir == Vector2.ZERO and !Input.is_anything_pressed():
 		if animator.current_animation == "attack":
-			animator.queue("idle")
+			animator.queue("RESET")
 		else:
-			animator.play("idle")
+			animator.play("RESET")
 	else:
 		if animator.current_animation == "dash" or animator.current_animation == "attack":
 			animator.queue("walking")
@@ -111,14 +111,7 @@ func _Attack() -> void:
 	if not can_attack:
 		return
 	
-	var attack_scene: PackedScene = preload("res://Scenes/attack.tscn")
-	var attack: Node2D = attack_scene.instantiate()
-	
-	attack.global_position = marker.global_position
-	attack.global_rotation = marker.global_rotation
-	
-	get_parent().add_child(attack)
-	
+	%Attack.attack()
 	can_attack = false
 	attack_timer.start(cooldown)
 
@@ -141,3 +134,8 @@ func _die():
 
 func _on_dash_timer_timeout() -> void:
 	sprint_can_be_true = true
+
+
+func _on_attack_pogo() -> void:
+	print("boop")
+	velocity += Vector2.UP * jump_velocity
