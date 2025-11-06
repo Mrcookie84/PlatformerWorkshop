@@ -29,6 +29,7 @@ project/assembly_name="PlatformerWorkshop"
 [global_group]
 
 obstacles=""
+enemies=""
 
 [input]
 

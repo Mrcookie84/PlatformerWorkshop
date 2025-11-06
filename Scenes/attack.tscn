@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://cdu20anxc8cjp"]
 
-[ext_resource type="Script" uid="uid://y2svhy7vx1b1" path="res://Scenes/attackPhysique.gd" id="1_6i371"]
-[ext_resource type="Texture2D" uid="uid://bbmas08r5amq3" path="res://Art/mew/attack-part-1.png" id="3_boclk"]
-[ext_resource type="Texture2D" uid="uid://1u4xco33tqd5" path="res://Art/mew/attack-part-2.png" id="4_uw11w"]
-[ext_resource type="Texture2D" uid="uid://cmtb5umt57ux1" path="res://Art/mew/attack-part-3.png" id="5_ymsaa"]
-[ext_resource type="Texture2D" uid="uid://b7e5qiihttrm3" path="res://Art/mew/attack-part-4.png" id="6_axprq"]
-[ext_resource type="Texture2D" uid="uid://05jntnq713g8" path="res://Art/mew/attack-part-0.png" id="7_boclk"]
+[ext_resource type="Script" uid="uid://y2svhy7vx1b1" path="res://Scripts/attackPhysique.gd" id="1_6i371"]
+[ext_resource type="Texture2D" uid="uid://bbmas08r5amq3" path="res://Art/Sprite/mew/attack-part-1.png" id="3_boclk"]
+[ext_resource type="Texture2D" uid="uid://1u4xco33tqd5" path="res://Art/Sprite/mew/attack-part-2.png" id="4_uw11w"]
+[ext_resource type="Texture2D" uid="uid://cmtb5umt57ux1" path="res://Art/Sprite/mew/attack-part-3.png" id="5_ymsaa"]
+[ext_resource type="Texture2D" uid="uid://b7e5qiihttrm3" path="res://Art/Sprite/mew/attack-part-4.png" id="6_axprq"]
+[ext_resource type="Texture2D" uid="uid://05jntnq713g8" path="res://Art/Sprite/mew/attack-part-0.png" id="7_boclk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_boclk"]
 radius = 200.0

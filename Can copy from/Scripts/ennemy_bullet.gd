@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export_group("Stats")
 @export var speed: float = 100
 @export var damage:int = 1
 
@@ -23,8 +24,9 @@ func _physics_process(delta: float) -> void:
 	if collision:
 		var collider: CollisionObject2D = collision.get_collider() 
 		if collider.is_in_group("obstacles"):
-			var new_direction = direction.bounce(collision.get_normal())
-			global_rotation = new_direction.angle()
+			queue_free()
+			#var new_direction = direction.bounce(collision.get_normal())
+			#global_rotation = new_direction.angle()
 		elif collider.is_in_group("player"):
-			collider._take_damage(damage)
+			collider.take_damage(damage)
 			queue_free()

@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 @export_group("Base_stats")
-@export var health:int = 3
+var health:int = 3
 @export var max_health:int = 3
 @export var health_bar:ProgressBar
 
@@ -118,7 +118,7 @@ func _Attack() -> void:
 func _on_attack_timer_timeout() -> void:
 	can_attack = true
 
-func _take_damage(damage: int):
+func take_damage(damage: int):
 	health = max(0, health - damage)
 	_update_health_bar()
 	if health == 0:
@@ -137,5 +137,9 @@ func _on_dash_timer_timeout() -> void:
 
 
 func _on_attack_pogo() -> void:
-	print("boop")
-	velocity += Vector2.UP * jump_velocity
+
+	velocity += Vector2.DOWN * jump_velocity
+	if !sprint_can_be_true :
+		can_sprint = true
+	if !can_double_jump:
+		can_double_jump = true

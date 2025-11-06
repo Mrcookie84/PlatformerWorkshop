@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://0ohaeddae13g" path="res://Art/Sprite/tile.png" id="1_3dryh"]
 [ext_resource type="PackedScene" uid="uid://2w0343gbnmdk" path="res://Scenes/player.tscn" id="2_wowpa"]
-[ext_resource type="PackedScene" uid="uid://d12t8yeh4x5p4" path="res://Can copy from/Scenes/ennemy.tscn" id="3_i6g32"]
+[ext_resource type="PackedScene" uid="uid://d12t8yeh4x5p4" path="res://Scenes/ennemy.tscn" id="3_i6g32"]
 [ext_resource type="PackedScene" uid="uid://bm4e1iwn6aast" path="res://Can copy from/Scenes/wall.tscn" id="4_1l0tm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2hjss"]
