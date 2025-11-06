@@ -13,3 +13,4 @@ func change_level(transition_request : SceneTransitionRequest) -> void :
 	remove_child(current_level)
 	add_child(level)
 	# make shit happens like player reposition and all
+	level.do_player_spawn(transition_request)
