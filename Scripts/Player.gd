@@ -103,7 +103,8 @@ func _physics_process(delta: float) -> void:
 	if is_on_wall():
 		velocity.x /= 1.25
 		
-	
+	if velocity.y < -400:
+		velocity.y = -400
 	# Applique le mouvement
 	move_and_slide()
 
