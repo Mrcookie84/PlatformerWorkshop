@@ -12,13 +12,9 @@ func attack() -> void:
 
 	
 func _on_area_2d_body_entered(body) -> void:
-	
-
 	if body.is_in_group("enemies"):
 		if body.has_method("take_damage"):
 			body.take_damage(damage)
-			print(damage)
-
 	else:
 	# Aucun méthode trouvée → log pour debug
 		push_warning("L'ennemi n'a pas de méthode 'take_damage' : %s" % [body])

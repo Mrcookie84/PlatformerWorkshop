@@ -25,8 +25,6 @@ func _physics_process(delta: float) -> void:
 		var collider: CollisionObject2D = collision.get_collider() 
 		if collider.is_in_group("obstacles"):
 			queue_free()
-			#var new_direction = direction.bounce(collision.get_normal())
-			#global_rotation = new_direction.angle()
 		elif collider.is_in_group("player"):
 			collider.take_damage(damage)
 			queue_free()

@@ -26,20 +26,28 @@ var player_in_range: bool = false
 var look_around: Vector2 = Vector2.ZERO
 var target: Node2D = null
 
+var start_position:Node2D
+var left_position:Node2D
+var right_position:Node2D
+
 func _ready() -> void:
 	health_bar.max_value = max_health
 	health = max_health
 	_update_health_bar()
 	
 	scale_stock = sprite.scale.x
-
+	
 func _process(delta: float) -> void:
+	if player_in_range:
+		var target_pos = Vector2(target.global_position.x, global_position.y)
+		global_position = global_position.move_toward(target_pos, speed * delta)
+	
 	if player_in_range and target:
 		anchor.look_at(target.global_position)
 	else:
 		_look_around()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if not _current_target:
 		return
 	
@@ -104,7 +112,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	player_in_range = true
 	target = body
 	if can_shoot:
-		anchor.look_at(target.global_position)
+		look_at(target.global_position)
 		_fire_with_cooldown()
 
 func _on_area_2d_body_exited(body: Node2D) -> void:

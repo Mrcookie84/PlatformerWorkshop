@@ -96,7 +96,7 @@ _data = {
 &"attack": SubResource("Animation_ypime")
 }
 
-[node name="Attack" type="Node2D" node_paths=PackedStringArray("animator")]
+[node name="Attack" type="Node2D" node_paths=PackedStringArray("animator") groups=["player_attack"]]
 script = ExtResource("1_6i371")
 animator = NodePath("AnimationPlayer")
 

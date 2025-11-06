@@ -30,6 +30,8 @@ project/assembly_name="PlatformerWorkshop"
 
 obstacles=""
 enemies=""
+player=""
+player_attack=""
 
 [input]
 

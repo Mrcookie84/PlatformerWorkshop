@@ -81,7 +81,6 @@ marker = NodePath("Sprite2D/projectileAnchor/bulletEmplacement")
 shoot_timer = NodePath("ShootTimer")
 look_timer = NodePath("LookAroundTimer")
 sprite = NodePath("Sprite2D")
-speed = 250.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(-2.25, 2.25)
