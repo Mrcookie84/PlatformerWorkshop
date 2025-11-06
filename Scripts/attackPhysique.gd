@@ -19,4 +19,4 @@ func _on_area_2d_body_entered(body) -> void:
 	# Aucun méthode trouvée → log pour debug
 		push_warning("L'ennemi n'a pas de méthode 'take_damage' : %s" % [body])
 	
-	#on_pogo.emit()
+	on_pogo.emit()

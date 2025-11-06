@@ -96,6 +96,7 @@ script = ExtResource("1_fobbg")
 max_health = 10
 health_bar = NodePath("UI/healthbar")
 DashTimer = NodePath("DashTimer")
+pogo_velocity = -400.0
 anchor = NodePath("Rig/projectileAnchor")
 marker = NodePath("Rig/projectileAnchor/bulletEmplacement")
 attack_timer = NodePath("AttackTimer")

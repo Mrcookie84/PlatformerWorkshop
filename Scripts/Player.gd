@@ -18,6 +18,7 @@ var can_double_jump:bool = false
 var can_sprint:bool = true
 var sprint_can_be_true:bool = true
 @export var DashTimer: Timer
+@export var pogo_velocity:float
 
 @export_group("Attack_param")
 @export var anchor: Node2D
@@ -137,8 +138,13 @@ func _on_dash_timer_timeout() -> void:
 
 
 func _on_attack_pogo() -> void:
-
-	velocity += Vector2.DOWN * jump_velocity
+	print("enter pogo")
+	if get_local_mouse_position().y < 0:	
+		return
+	
+	velocity += (Vector2.DOWN * pogo_velocity)
+	print("force applied")
+	
 	if !sprint_can_be_true :
 		can_sprint = true
 	if !can_double_jump:
