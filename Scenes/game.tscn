@@ -31,7 +31,7 @@ position = Vector2(63.99994, 597.9999)
 scale = Vector2(310.51538, 21.317245)
 
 [node name="Player" parent="World/Map" instance=ExtResource("3_wrm1d")]
-position = Vector2(74, 412)
+position = Vector2(2, 249)
 jump_velocity = -800.0
 
 [node name="Ennemy" parent="World/Map" instance=ExtResource("4_1l0tm")]
@@ -45,7 +45,8 @@ end = Vector2(2000, 500)
 position = Vector2(1197, 474)
 
 [node name="RespawnPoint2" parent="." instance=ExtResource("5_wowpa")]
-position = Vector2(563, 478)
+position = Vector2(3, 255.00003)
+scale = Vector2(3.9600022, 8.16)
 
 [node name="Spikes" parent="." instance=ExtResource("6_i6g32")]
 position = Vector2(913, 472)
