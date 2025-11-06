@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhawyeobqieal"]
+[gd_scene load_steps=8 format=3 uid="uid://dhawyeobqieal"]
 
 [ext_resource type="Texture2D" uid="uid://0ohaeddae13g" path="res://Art/Sprite/tile.png" id="1_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://bm4e1iwn6aast" path="res://Can copy from/Scenes/wall.tscn" id="2_wrm1d"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dfu526pw0u2rg" path="res://Scenes/moving_platform.tscn" id="4_3dryh"]
 [ext_resource type="PackedScene" uid="uid://22j46sg0umaj" path="res://Scenes/respawn_point.tscn" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://wxpsautupfoo" path="res://Scenes/spikes.tscn" id="6_i6g32"]
+[ext_resource type="PackedScene" uid="uid://ct4as5ml71oa" path="res://Scenes/up_fan.tscn" id="7_1l0tm"]
 
 [node name="Game" type="Node"]
 
@@ -25,11 +26,12 @@ region_enabled = true
 region_rect = Rect2(-8561.966, -5229, 10000.508, 10000)
 
 [node name="Wall" parent="World/Map" instance=ExtResource("2_wrm1d")]
-position = Vector2(63.99994, 597.9999)
+position = Vector2(64, 596)
 scale = Vector2(310.51538, 21.317245)
 
 [node name="Player" parent="World/Map" instance=ExtResource("3_wrm1d")]
-position = Vector2(74, 412)
+position = Vector2(230, -37)
+scale = Vector2(0.21, 0.21)
 jump_velocity = -800.0
 
 [node name="MovingPlatform" parent="." instance=ExtResource("4_3dryh")]
@@ -44,3 +46,6 @@ position = Vector2(563, 478)
 
 [node name="Spikes" parent="." instance=ExtResource("6_i6g32")]
 position = Vector2(913, 472)
+
+[node name="UpFan" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(-435, 530)
