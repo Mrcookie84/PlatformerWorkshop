@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 @export_group("Base_stats")
@@ -28,6 +29,7 @@ var can_attack:bool = true
 @export_group("player art")
 @export var player_sprite:Sprite2D
 @export var animator:AnimationPlayer
+var respawn:Respawn_Point
 
 func _ready() -> void:
 	health_bar.max_value = max_health
@@ -130,7 +132,12 @@ func _take_damage(damage: int):
 		_die()
 
 func _die():
-	queue_free()
+	print("dead")
+	if respawn:
+		respawn._respawn()
+	else:
+		print("pas de respawn")
+	#queue_free()
 
 func _on_dash_timer_timeout() -> void:
 	sprint_can_be_true = true

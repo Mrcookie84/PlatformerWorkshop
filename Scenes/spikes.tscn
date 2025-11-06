@@ -7,7 +7,9 @@
 size = Vector2(63, 32)
 
 [node name="Spikes" type="Area2D" groups=["obstacles"]]
+collision_layer = 2
 script = ExtResource("1_gwqs2")
+damage = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 15)
