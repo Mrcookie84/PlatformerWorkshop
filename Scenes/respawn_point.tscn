@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://22j46sg0umaj"]
+
+[ext_resource type="Script" uid="uid://dlqfqim1duv2a" path="res://Scripts/respawn_point.gd" id="1_nnvpn"]
+[ext_resource type="Texture2D" uid="uid://5de2r8ux34hf" path="res://Art/kenney_scribble-platformer/PNG/Default/ui_select.png" id="2_iwllv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nnvpn"]
+
+[node name="RespawnPoint" type="Node2D"]
+script = ExtResource("1_nnvpn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_iwllv")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_nnvpn")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_entered"]
