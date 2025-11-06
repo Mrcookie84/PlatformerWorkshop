@@ -68,7 +68,7 @@ func _shoot() -> void:
 	if not target:
 		return
 	look_at(target.global_position)
-	var projectile_scene: PackedScene = preload("res://Scenes/ennemy_bullet.tscn")
+	var projectile_scene: PackedScene = preload("res://Can copy from/Scenes/Bullet.tscn")
 	var projectile: CharacterBody2D = projectile_scene.instantiate()
 	projectile.global_position = marker.global_position
 	projectile.global_rotation = marker.global_rotation
