@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://2w0343gbnmdk"]
+[gd_scene load_steps=9 format=3 uid="uid://2w0343gbnmdk"]
 
 [ext_resource type="Script" uid="uid://buuxens33w3s7" path="res://Scripts/Player.gd" id="1_fobbg"]
-[ext_resource type="Script" uid="uid://bn4echo7iqi4o" path="res://Scripts/rig.gd" id="2_8erm5"]
 [ext_resource type="Texture2D" uid="uid://0l81vyqx5nd7" path="res://Art/Sprite/player.png" id="2_hqtel"]
 [ext_resource type="Texture2D" uid="uid://1i112jgjiwam" path="res://Art/Sprite/neutral_projectile.png" id="3_6t5aa"]
-[ext_resource type="Script" uid="uid://bn4echo7iqi4o" path="res://Scripts/PlayerSpriteScript.gd" id="3_fkybt"]
-[ext_resource type="PackedScene" uid="uid://4qox140xfhaq" path="res://Scenes/ui.tscn" id="5_fkybt"]
+[ext_resource type="Script" uid="uid://bn4echo7iqi4o" path="res://Scripts/rig.gd" id="3_fkybt"]
+[ext_resource type="PackedScene" path="res://Scenes/ui.tscn" id="5_fkybt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wxu4w"]
 radius = 126.14278
@@ -25,25 +24,9 @@ tracks/0/keys = {
 "values": [ExtResource("2_hqtel")]
 }
 
-[sub_resource type="Animation" id="Animation_pu2lt"]
-resource_name = "walking_forward"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Rig/Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("5_8erm5"), ExtResource("6_f1ek2"), ExtResource("5_8erm5"), ExtResource("7_tx1dd"), ExtResource("5_8erm5")]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ukyrk"]
 _data = {
-&"RESET": SubResource("Animation_gymyn"),
-&"walking": SubResource("Animation_pu2lt")
+&"RESET": SubResource("Animation_gymyn")
 }
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("health_bar", "DashTimer", "player_sprite", "animator") groups=["player"]]
@@ -56,7 +39,7 @@ player_sprite = NodePath("Rig/Sprite2D")
 animator = NodePath("AnimationPlayer")
 
 [node name="Rig" type="Node2D" parent="." node_paths=PackedStringArray("player")]
-script = ExtResource("2_8erm5")
+script = ExtResource("3_fkybt")
 player = NodePath("..")
 
 [node name="projectileAnchor" type="Node2D" parent="Rig"]
@@ -93,23 +76,11 @@ scale = Vector2(3.1620297, 2.2040493)
 zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 
-[node name="ProgressBar" parent="." instance=ExtResource("4_vgqql")]
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = -1893.0
-offset_top = -1012.0
-offset_right = -1650.0
-offset_bottom = -985.0
-grow_horizontal = 1
-grow_vertical = 1
-
+[node name="ProgressBar" parent="." instance=ExtResource("5_fkybt")]
 
 [node name="UI" parent="." instance=ExtResource("5_fkybt")]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_ukyrk")
 }
