@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://cuy6a2jyxq66j"
+=======
+uid="uid://m8rcsf5q6imm"
+>>>>>>> f65b8cd (sprite)
 path="res://.godot/imported/Sprite-idle.png-7469047e3f67b10f58d3f4e8f0223426.ctex"
 metadata={
 "vram_texture": false

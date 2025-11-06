@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bjdjudafe5gau"
+=======
+uid="uid://c1cob3j4oaqmb"
+>>>>>>> f65b8cd (sprite)
 path="res://.godot/imported/Sprite-0001.png-fb3266303068f6f95b54735c5ff24773.ctex"
 metadata={
 "vram_texture": false

@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://w0e0njp8jsq8"
+=======
+uid="uid://bd838utuk455p"
+>>>>>>> f65b8cd (sprite)
 path="res://.godot/imported/Sprite-0004-attack.png-4d05fb9439d8625c9d37e436a88b4eb0.ctex"
 metadata={
 "vram_texture": false
