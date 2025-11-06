@@ -4,6 +4,7 @@
 size = Vector2(180, 671)
 
 [node name="UpFan" type="Area2D"]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -325.5)

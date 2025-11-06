@@ -1,11 +1,10 @@
 extends Area2D
 
 @export var SPEED: float
-@export var distance: Vector2
+@export var target_direction: Vector2
 
-var player: Player
+var target: CharacterBody2D
 
 func _on_body_entered(body: Node2D) -> void:
-	player = body
-func _physics_process(delta: float) -> void:
-	player.velocity = player.global_position.move_toward(distance, SPEED * delta)
+	target = body
+	target.global_position = target.global_position.move_toward(target_direction, SPEED)
