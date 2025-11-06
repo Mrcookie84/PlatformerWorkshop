@@ -1,13 +1,23 @@
-[gd_scene load_steps=9 format=3 uid="uid://2w0343gbnmdk"]
+[gd_scene load_steps=23 format=3 uid="uid://2w0343gbnmdk"]
 
 [ext_resource type="Script" uid="uid://buuxens33w3s7" path="res://Scripts/Player.gd" id="1_fobbg"]
 [ext_resource type="Texture2D" uid="uid://0l81vyqx5nd7" path="res://Art/Sprite/player.png" id="2_hqtel"]
 [ext_resource type="Texture2D" uid="uid://1i112jgjiwam" path="res://Art/Sprite/neutral_projectile.png" id="3_6t5aa"]
 [ext_resource type="Script" uid="uid://bn4echo7iqi4o" path="res://Scripts/rig.gd" id="3_fkybt"]
+[ext_resource type="Texture2D" uid="uid://do10pwbxw1h46" path="res://Art/mew/Sprite-0007-walk-2.png" id="5_8erm5"]
 [ext_resource type="PackedScene" path="res://Scenes/ui.tscn" id="5_fkybt"]
+[ext_resource type="Texture2D" uid="uid://t5vsh85eiptl" path="res://Art/mew/Sprite-0007-walk.png" id="6_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://bvlgp81mqgflr" path="res://Art/mew/Sprite-0007.png" id="7_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://bqwjfj5ovokal" path="res://Art/mew/Sprite-0001.png" id="8_h4iuc"]
+[ext_resource type="Texture2D" uid="uid://2fkuvussknm4" path="res://Art/mew/Sprite-0002.png" id="9_fd4e3"]
+[ext_resource type="Texture2D" uid="uid://pqc1idp11ci6" path="res://Art/mew/Sprite-0003.png" id="10_qqcod"]
+[ext_resource type="Texture2D" uid="uid://cmsx3jgxtkp03" path="res://Art/mew/Sprite-0005.png" id="12_fs7ks"]
+[ext_resource type="Texture2D" uid="uid://dpld6vtvtvh1b" path="res://Art/mew/Sprite-0006.png" id="13_l6n3p"]
+[ext_resource type="Texture2D" uid="uid://dxu05hn00k5e4" path="res://Art/mew/Sprite-0004-attack.png" id="14_olqyp"]
+[ext_resource type="Texture2D" uid="uid://uxcnlah4ya86" path="res://Art/mew/Sprite-idle.png" id="15_fd4e3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wxu4w"]
-radius = 126.14278
+radius = 144.08678
 
 [sub_resource type="Animation" id="Animation_gymyn"]
 length = 0.001
@@ -24,17 +34,86 @@ tracks/0/keys = {
 "values": [ExtResource("2_hqtel")]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ukyrk"]
-_data = {
-&"RESET": SubResource("Animation_gymyn")
+[sub_resource type="Animation" id="Animation_pu2lt"]
+resource_name = "walking"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rig/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_8erm5"), ExtResource("6_f1ek2"), ExtResource("7_tx1dd"), ExtResource("5_8erm5")]
 }
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("health_bar", "DashTimer", "player_sprite", "animator") groups=["player"]]
+[sub_resource type="Animation" id="Animation_wpjfl"]
+resource_name = "dash"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rig/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.2, 0.30000007, 0.40000004, 0.50000006, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("12_fs7ks"), ExtResource("13_l6n3p"), ExtResource("13_l6n3p"), ExtResource("7_tx1dd"), ExtResource("14_olqyp"), ExtResource("9_fd4e3"), ExtResource("8_h4iuc")]
+}
+
+[sub_resource type="Animation" id="Animation_qqcod"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rig/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_h4iuc"), ExtResource("9_fd4e3"), ExtResource("15_fd4e3"), ExtResource("8_h4iuc")]
+}
+
+[sub_resource type="Animation" id="Animation_h4iuc"]
+resource_name = "attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rig/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.40000004, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_h4iuc"), ExtResource("9_fd4e3"), ExtResource("10_qqcod"), ExtResource("14_olqyp"), ExtResource("10_qqcod"), ExtResource("9_fd4e3"), ExtResource("8_h4iuc")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ukyrk"]
+_data = {
+&"RESET": SubResource("Animation_gymyn"),
+&"attack": SubResource("Animation_h4iuc"),
+&"dash": SubResource("Animation_wpjfl"),
+&"idle": SubResource("Animation_qqcod"),
+&"walking": SubResource("Animation_pu2lt")
+}
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("health_bar", "DashTimer", "anchor", "marker", "attack_timer", "player_sprite", "animator") groups=["player"]]
 texture_filter = 1
 collision_mask = 6
 script = ExtResource("1_fobbg")
 health_bar = NodePath("UI/healthbar")
 DashTimer = NodePath("DashTimer")
+anchor = NodePath("Rig/projectileAnchor")
+marker = NodePath("Rig/projectileAnchor/bulletEmplacement")
+attack_timer = NodePath("AttackTimer")
 player_sprite = NodePath("Rig/Sprite2D")
 animator = NodePath("AnimationPlayer")
 
@@ -45,14 +124,14 @@ player = NodePath("..")
 [node name="projectileAnchor" type="Node2D" parent="Rig"]
 
 [node name="bulletEmplacement" type="Marker2D" parent="Rig/projectileAnchor"]
-position = Vector2(116, 0)
+position = Vector2(219, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Rig/projectileAnchor"]
 position = Vector2(194, 0)
 texture = ExtResource("3_6t5aa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Rig"]
-position = Vector2(0, -36)
+position = Vector2(-55, -18)
 scale = Vector2(6, 6)
 texture = ExtResource("2_hqtel")
 
@@ -60,6 +139,7 @@ texture = ExtResource("2_hqtel")
 shape = SubResource("CircleShape2D_wxu4w")
 
 [node name="AttackTimer" type="Timer" parent="."]
+wait_time = 0.1
 one_shot = true
 
 [node name="DashTimer" type="Timer" parent="."]
@@ -80,11 +160,7 @@ position_smoothing_enabled = true
 
 [node name="UI" parent="." instance=ExtResource("5_fkybt")]
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_ukyrk")
-}
-
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 
 [editable path="UI"]
