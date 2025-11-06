@@ -89,11 +89,6 @@ one_shot = true
 wait_time = 0.5
 one_shot = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_ukyrk")
-}
-
 [node name="ProgressBar" parent="." instance=ExtResource("4_vgqql")]
 anchors_preset = 0
 anchor_left = 0.0
@@ -107,5 +102,10 @@ offset_bottom = -985.0
 grow_horizontal = 1
 grow_vertical = 1
 scale = Vector2(3.1620297, 2.2040493)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ukyrk")
+}
 
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
