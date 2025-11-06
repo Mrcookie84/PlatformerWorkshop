@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3fhfpkpr70pg"]
+
+[ext_resource type="Script" uid="uid://cnkoj2ojvqcbb" path="res://Scripts/SceneTransitor.gd" id="1_ctomv"]
+
+[node name="SceneTransitor" type="Area2D"]
+script = ExtResource("1_ctomv")
