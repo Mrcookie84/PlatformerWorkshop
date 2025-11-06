@@ -1,4 +1,4 @@
-extends Node2D
+extends Sprite2D
 
 @export var player:CharacterBody2D
 
@@ -8,9 +8,9 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	
 	if player.velocity.x < 0:
-		scale.x = -1
+		flip_h = true
 	else:
-		scale.x = 1
+		flip_h = false

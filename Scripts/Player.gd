@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 @export_group("Base_stats")
@@ -26,7 +27,8 @@ var sprint_can_be_true:bool = true
 
 @export_group("player art")
 @export var player_sprite:Sprite2D
-@export var animator:AnimationPlayer
+
+var respawn:Respawn_Point
 
 func _ready() -> void:
 	health_bar.max_value = max_health
@@ -43,8 +45,6 @@ func _update_health_bar():
 
 func _physics_process(delta: float) -> void:
 	var input_dir := Vector2(Input.get_axis("Backward", "Forward"), 0)
-	if input_dir != null:
-		animator.play("walking")
 	
 	# Mouvement horizontal
 	velocity.x = lerp(velocity.x, input_dir.x * speed, delta * 10.0)
@@ -108,13 +108,19 @@ func _physics_process(delta: float) -> void:
 	#canShoot = true
 
 func _take_damage(damage: int):
+	print("takingDamage")
 	health = max(0, health - damage)
 	_update_health_bar()
 	if health == 0:
 		_die()
 
 func _die():
-	queue_free()
+	print("dead")
+	if respawn:
+		respawn._respawn()
+	else:
+		print("pas de respawn")
+	#queue_free()
 
 func _on_dash_timer_timeout() -> void:
 	sprint_can_be_true = true
