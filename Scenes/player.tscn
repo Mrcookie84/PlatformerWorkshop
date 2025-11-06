@@ -93,7 +93,26 @@ scale = Vector2(3.1620297, 2.2040493)
 zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 
+[node name="ProgressBar" parent="." instance=ExtResource("4_vgqql")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -1893.0
+offset_top = -1012.0
+offset_right = -1650.0
+offset_bottom = -985.0
+grow_horizontal = 1
+grow_vertical = 1
+
+
 [node name="UI" parent="." instance=ExtResource("5_fkybt")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ukyrk")
+}
 
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 
