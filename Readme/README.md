@@ -13,6 +13,7 @@ Feature :
 	Plateform:
 		Solid ground
 		Moving plateform
+		Check point
 		
 		
 	Enemie:

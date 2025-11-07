@@ -127,7 +127,6 @@ func take_damage(damage: int):
 		_die()
 
 func _die():
-	print("dead")
 	if respawn:
 		respawn._respawn()
 	else:
