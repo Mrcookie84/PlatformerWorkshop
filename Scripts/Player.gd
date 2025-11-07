@@ -54,7 +54,7 @@ func _physics_process(delta: float) -> void:
 	
 	var input_dir := Vector2(Input.get_axis("Backward", "Forward"), 0)
 	
-	if input_dir == Vector2.ZERO and !Input.is_anything_pressed():
+	if input_dir == Vector2.ZERO and !Input.get_axis("Backward", "Forward"):
 		if animator.current_animation == "attack":
 			animator.queue("RESET")
 		else:

@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://22j46sg0umaj" path="res://Scenes/respawn_point.tscn" id="4_h6p24"]
 [ext_resource type="PackedScene" uid="uid://wxpsautupfoo" path="res://Scenes/spikes.tscn" id="5_vn7r1"]
 [ext_resource type="PackedScene" uid="uid://4h632heonow7" path="res://Scenes/death_zone.tscn" id="6_vwkqt"]
+[ext_resource type="PackedScene" uid="uid://bn6sjtotjbx6k" path="res://Scenes/moving_platform_up.tscn" id="7_csbjj"]
 [ext_resource type="PackedScene" uid="uid://d12t8yeh4x5p4" path="res://Scenes/ennemy.tscn" id="7_fpsp3"]
-[ext_resource type="PackedScene" uid="uid://dfu526pw0u2rg" path="res://Scenes/moving_platform.tscn" id="8_wffsm"]
 [ext_resource type="PackedScene" uid="uid://b3fhfpkpr70pg" path="res://Scenes/scene_transitor.tscn" id="10_csbjj"]
 [ext_resource type="Script" uid="uid://dbya25w5hlppx" path="res://Scripts/SceneTransitionRequest.gd" id="11_h6p24"]
 [ext_resource type="Script" uid="uid://6kpqmtp3xno1" path="res://Scripts/EntryPoint.gd" id="11_vn7r1"]
@@ -62,7 +62,7 @@ tile_set = ExtResource("2_h3ll2")
 [node name="Respawn" type="Node" parent="."]
 
 [node name="RespawnPoint2" parent="Respawn" instance=ExtResource("4_h6p24")]
-position = Vector2(-3847, 578)
+position = Vector2(-3838, 652.00006)
 scale = Vector2(9.16173, 7.8975654)
 
 [node name="RespawnPoint3" parent="Respawn" instance=ExtResource("4_h6p24")]
@@ -167,15 +167,15 @@ position = Vector2(-223, 1258)
 [node name="Ennemy7" parent="Trap" instance=ExtResource("7_fpsp3")]
 position = Vector2(-1198, 1635)
 
-[node name="Plateform" parent="Trap" instance=ExtResource("8_wffsm")]
-position = Vector2(-3069, 890)
+[node name="Plateform" parent="Trap" instance=ExtResource("7_csbjj")]
+position = Vector2(-3241, 914)
 
-[node name="Plateform3" parent="Trap" instance=ExtResource("8_wffsm")]
-position = Vector2(-3029, 258)
+[node name="Plateform2" parent="Trap" instance=ExtResource("7_csbjj")]
+position = Vector2(-2971, -168)
+rotation = 3.1415927
 
-[node name="Plateform2" parent="Trap" instance=ExtResource("8_wffsm")]
-position = Vector2(-2644, 592)
-scale = Vector2(-1, 1)
+[node name="Plateform3" parent="Trap" instance=ExtResource("7_csbjj")]
+position = Vector2(-2294, -170)
 
 [node name="SceneTransitor" parent="." instance=ExtResource("10_csbjj")]
 position = Vector2(3046, 1850)
@@ -186,6 +186,6 @@ position = Vector2(-10, 14)
 shape = SubResource("CapsuleShape2D_h6p24")
 
 [node name="Spawn" type="Marker2D" parent="."]
-position = Vector2(-3850, 582)
+position = Vector2(-3836, 648)
 script = ExtResource("11_vn7r1")
 metadata/_custom_type_script = "uid://6kpqmtp3xno1"
