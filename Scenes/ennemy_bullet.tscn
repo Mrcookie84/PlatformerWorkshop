@@ -9,7 +9,6 @@ height = 54.0
 
 [node name="EnnemyBullet" type="CharacterBody2D" groups=["obstacles"]]
 collision_layer = 4
-collision_mask = 3
 script = ExtResource("1_52vpw")
 speed = 500.0
 

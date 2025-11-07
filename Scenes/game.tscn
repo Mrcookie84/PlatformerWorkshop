@@ -55,19 +55,19 @@ scale = Vector2(9.16173, 7.8975654)
 
 [node name="RespawnPoint3" parent="World/Map/Respawn" instance=ExtResource("5_wowpa")]
 position = Vector2(-414, 349)
-scale = Vector2(4.6251087, 4.964763)
+scale = Vector2(2.1451085, 4.964763)
 
 [node name="RespawnPoint4" parent="World/Map/Respawn" instance=ExtResource("5_wowpa")]
 position = Vector2(796.9999, 349)
-scale = Vector2(4.6251087, 4.964763)
+scale = Vector2(2.1451085, 4.964763)
 
 [node name="RespawnPoint5" parent="World/Map/Respawn" instance=ExtResource("5_wowpa")]
-position = Vector2(2638, 349)
-scale = Vector2(4.6251087, 4.964763)
+position = Vector2(2591, 349)
+scale = Vector2(2.1451085, 4.964763)
 
 [node name="RespawnPoint6" parent="World/Map/Respawn" instance=ExtResource("5_wowpa")]
-position = Vector2(6153, -164)
-scale = Vector2(4.6251087, 4.964763)
+position = Vector2(6114, -164)
+scale = Vector2(2.1451085, 4.964763)
 
 [node name="Trap" type="Node" parent="World/Map"]
 
