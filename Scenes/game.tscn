@@ -49,3 +49,7 @@ position = Vector2(913, 472)
 
 [node name="UpFan" parent="." instance=ExtResource("7_1l0tm")]
 position = Vector2(-435, 530)
+SPEED = 2000.0
+target_direction = Vector2(0, -1)
+
+[connection signal="body_exited" from="UpFan" to="UpFan" method="_on_body_exited"]
