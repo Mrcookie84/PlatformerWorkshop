@@ -32,7 +32,7 @@ metadata/_custom_type_script = "uid://dbya25w5hlppx"
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bs12r"]
 size = Vector2(322, 534)
 
-[node name="Map" type="Node2D"]
+[node name="Map2" type="Node2D"]
 script = ExtResource("1_4iphx")
 metadata/_custom_type_script = "uid://bl4n28m7ygow5"
 
@@ -172,11 +172,11 @@ position = Vector2(1062, -441)
 position = Vector2(2300, -657)
 
 [node name="SceneTransitor" parent="." instance=ExtResource("9_jgkgd")]
-position = Vector2(7832, -1048)
+position = Vector2(7836, -1121)
 transition_request = SubResource("Resource_rqhku")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTransitor"]
-position = Vector2(141, -52)
+position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_bs12r")
 
 [node name="Spawn" type="Marker2D" parent="."]

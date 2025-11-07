@@ -183,7 +183,7 @@ position = Vector2(-22, 977)
 scale = Vector2(1305.484, 3)
 
 [node name="DeathZone3" parent="Trap" instance=ExtResource("5_mtqcm")]
-position = Vector2(7808, -196)
+position = Vector2(1320.0001, -587.00006)
 scale = Vector2(500, 1.146)
 
 [node name="Ennemy" parent="Trap" instance=ExtResource("7_vn460")]
@@ -206,11 +206,11 @@ rotation = 3.1415927
 scale = Vector2(-1, 1)
 
 [node name="SceneTransitor" parent="." instance=ExtResource("9_ng020")]
-position = Vector2(6446, 485)
+position = Vector2(6494, 485)
 transition_request = SubResource("Resource_mtqcm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTransitor"]
-position = Vector2(82.5, 5.5)
+position = Vector2(-1, 4)
 shape = SubResource("RectangleShape2D_vn2uo")
 
 [node name="Spawn" type="Marker2D" parent="."]
