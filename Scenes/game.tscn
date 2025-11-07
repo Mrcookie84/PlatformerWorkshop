@@ -1,108 +1,23 @@
-[gd_scene load_steps=11 format=4 uid="uid://dhawyeobqieal"]
+[gd_scene load_steps=4 format=3 uid="uid://dhawyeobqieal"]
 
+[ext_resource type="Script" uid="uid://degaf0k8bj3y5" path="res://Scripts/world_manager.gd" id="2_3dryh"]
+[ext_resource type="PackedScene" uid="uid://dahkh005pl10l" path="res://Scenes/level1.tscn" id="3_3dryh"]
 [ext_resource type="PackedScene" uid="uid://2w0343gbnmdk" path="res://Scenes/player.tscn" id="3_wrm1d"]
-[ext_resource type="PackedScene" uid="uid://bvpckijjf80xg" path="res://Scenes/ennemy.tscn" id="4_1l0tm"]
-[ext_resource type="PackedScene" uid="uid://dfu526pw0u2rg" path="res://Scenes/moving_platform.tscn" id="4_3dryh"]
-[ext_resource type="TileSet" uid="uid://bgld3llibqm14" path="res://Assets/TileMapTerrain.tres" id="4_v158k"]
-[ext_resource type="PackedScene" uid="uid://22j46sg0umaj" path="res://Scenes/respawn_point.tscn" id="5_wowpa"]
-[ext_resource type="PackedScene" uid="uid://wxpsautupfoo" path="res://Scenes/spikes.tscn" id="6_i6g32"]
-[ext_resource type="PackedScene" uid="uid://4h632heonow7" path="res://Scenes/death_zone.tscn" id="8_v158k"]
 
-[sub_resource type="Gradient" id="Gradient_1l0tm"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0.2, 1, 1)
+[node name="Game" type="Node2D"]
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_v158k"]
-frequency = 0.0042
+[node name="World" type="Node2D" parent="." node_paths=PackedStringArray("current_level", "player")]
+script = ExtResource("2_3dryh")
+current_level = NodePath("level 1")
+player = NodePath("Main/Player")
+metadata/_custom_type_script = "uid://degaf0k8bj3y5"
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_h4fw4"]
-noise = SubResource("FastNoiseLite_v158k")
-color_ramp = SubResource("Gradient_1l0tm")
-seamless = true
+[node name="Main" type="Node2D" parent="World"]
 
-[node name="Game" type="Node"]
-
-[node name="World" type="Node" parent="."]
-
-[node name="Map" type="Node" parent="World"]
-
-[node name="Art" type="Node" parent="World/Map"]
-
-[node name="Parallax2D" type="Parallax2D" parent="World/Map/Art"]
-scale = Vector2(30, 30)
-scroll_scale = Vector2(1.25, 1.25)
-scroll_offset = Vector2(154, 38)
-
-[node name="BG" type="Sprite2D" parent="World/Map/Art/Parallax2D"]
-texture_repeat = 2
-position = Vector2(-65, 40)
-texture = SubResource("NoiseTexture2D_h4fw4")
-region_enabled = true
-region_rect = Rect2(-8561.966, -5229, 10000.508, 10000)
-
-[node name="Node2D" type="Node2D" parent="World/Map/Art"]
-
-[node name="TileMapLayer2" type="TileMapLayer" parent="World/Map/Art/Node2D"]
-position = Vector2(0, 307)
-scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AADq/wMAAAADAAYAAADr/wMAAAADAAYAAADs/wMAAAADAAYAAADt/wMAAAADAAYAAADu/wMAAAADAAYAAADv/wMAAAADAAYAAAD3/wMAAAADAAYAAAD4/wMAAAADAAYAAAD5/wMAAAADAAYAAAD6/wMAAAADAAYAAAD7/wMAAAADAAYAAAALAAMAAAADAAYAAAAMAAMAAAADAAYAAAANAAMAAAADAAYAAAAOAAMAAAADAAYAAADp/wMAAAADAAYAAADo/wMAAAADAAYAAADn/wMAAAADAAYAAADm/wMAAAADAAYAAADv/wQAAAAGAAgAAADv/wUAAAAGAAgAAADv/wYAAAAGAAgAAADv/wcAAAAGAAgAAADv/wgAAAAGAAgAAAD3/wQAAAAGAAgAAAD3/wUAAAAGAAgAAAD3/wYAAAAGAAgAAAD3/wcAAAAGAAgAAAD3/wgAAAAGAAgAAAD3/wkAAAAGAAgAAADv/wkAAAAGAAgAAADv/woAAAAGAAgAAAD3/woAAAAGAAgAAAD7/wQAAAAGAAgAAAD7/wUAAAAGAAgAAAD7/wYAAAAGAAgAAAD7/wcAAAAGAAgAAAD7/wgAAAAGAAgAAAD7/wkAAAAGAAgAAAD7/woAAAAGAAgAAAAKAAMAAAADAAYAAAAKAAQAAAAGAAgAAAAKAAUAAAAGAAgAAAAKAAYAAAAGAAgAAAAKAAcAAAAGAAgAAAAKAAgAAAAGAAgAAAAKAAkAAAAGAAgAAAAKAAoAAAAGAAgAAAAOAAQAAAAGAAgAAAAOAAUAAAAGAAgAAAAOAAYAAAAGAAgAAAAOAAcAAAAGAAgAAAAOAAgAAAAGAAgAAAAOAAkAAAAGAAgAAAAOAAoAAAAGAAgAAAAmAAMAAAADAAYAAAAnAAMAAAADAAYAAAAoAAMAAAADAAYAAAApAAMAAAADAAYAAAAqAAMAAAADAAYAAAArAAMAAAADAAYAAAAsAAMAAAADAAYAAAAtAAMAAAADAAYAAAAuAAMAAAADAAYAAAAvAAMAAAADAAYAAAAwAAMAAAADAAYAAAAxAAMAAAADAAYAAAAyAAMAAAADAAYAAAAzAAMAAAADAAYAAAA0AAMAAAADAAYAAAA1AAMAAAADAAYAAAA2AAMAAAADAAYAAAA3AAMAAAADAAYAAADm/wQAAAAGAAgAAADm/wUAAAAGAAgAAADm/wYAAAAGAAgAAADm/wcAAAAGAAgAAADm/wgAAAAGAAgAAADm/wkAAAAGAAgAAADm/woAAAAGAAgAAAA3AAQAAAAGAAgAAAA3AAUAAAAGAAgAAAA3AAYAAAAGAAgAAAA3AAcAAAAGAAgAAAA3AAgAAAAGAAgAAAA3AAkAAAAGAAgAAAA3AAoAAAAGAAgAAABdAPv/AAADAAYAAABeAPv/AAADAAYAAABfAPv/AAADAAYAAABgAPv/AAADAAYAAABhAPv/AAADAAYAAABiAPv/AAADAAYAAABjAPv/AAADAAYAAABkAPv/AAADAAYAAABlAPv/AAADAAYAAABmAPv/AAADAAYAAABnAPv/AAADAAYAAABoAPv/AAADAAYAAABpAPv/AAADAAYAAABqAPv/AAADAAYAAABrAPr/AAACAAkAAGBsAPn/AAACAAkAAGBtAPj/AAACAAkAAGBuAPf/AAACAAkAAGBvAPb/AAACAAkAAGBrAPv/AAAGAAgAAABsAPr/AAAGAAgAAABtAPn/AAAGAAgAAABuAPj/AAAGAAgAAABvAPf/AAAGAAgAAABwAPb/AAADAAYAAABxAPb/AAADAAYAAAByAPb/AAADAAYAAABzAPb/AAADAAYAAAB0APb/AAADAAYAAAB1APb/AAADAAYAAAB2APb/AAADAAYAAAB3APb/AAADAAYAAAB4APb/AAADAAYAAAB5APb/AAADAAYAAAB6APb/AAADAAYAAAB7APb/AAADAAYAAAB8APb/AAADAAYAAAB9APb/AAADAAYAAAB+APb/AAADAAYAAAB/APb/AAADAAYAAACAAPb/AAADAAYAAACBAPb/AAADAAYAAACCAPb/AAADAAYAAACDAPb/AAADAAYAAABdAPz/AAAGAAgAAABdAP3/AAAGAAgAAABdAP7/AAAGAAgAAABdAP//AAAGAAgAAABdAAAAAAAGAAgAAABdAAEAAAAGAAgAAABdAAIAAAAGAAgAAABdAAMAAAAGAAgAAABdAAQAAAAGAAgAAABdAAUAAAAGAAgAAABdAAYAAAAGAAgAAABdAAcAAAAGAAgAAABdAAgAAAAGAAgAAABdAAkAAAAGAAgAAABdAAoAAAAGAAgAAAB8APX/AAAGAAEAAACDAPX/AAAGAAYAAACDAPT/AAAGAAYAAACDAPP/AAAGAAYAAACDAPL/AAAGAAYAAACDAPH/AAAGAAYAAAAlAAMAAAADAAYAAAAkAAMAAAADAAYAAAAkAAQAAAAGAAgAAAAkAAUAAAAGAAgAAAAkAAYAAAAGAAgAAAAkAAcAAAAGAAgAAAAkAAgAAAAGAAgAAAAkAAkAAAAGAAgAAAAkAAoAAAAGAAgAAACDAPf/AAAGAAgAAACDAPj/AAAGAAgAAACDAPn/AAAGAAgAAACDAPr/AAAGAAgAAACDAPv/AAAGAAgAAACDAPz/AAAGAAgAAACDAP3/AAAGAAgAAACDAP7/AAAGAAgAAACDAP//AAAGAAgAAACDAAAAAAAGAAgAAACDAAEAAAAGAAgAAACDAAIAAAAGAAgAAACDAAMAAAAGAAgAAACDAAQAAAAGAAgAAACDAAUAAAAGAAgAAACDAAYAAAAGAAgAAACDAAcAAAAGAAgAAACDAAgAAAAGAAgAAACDAAkAAAAGAAgAAACDAAoAAAAGAAgAAAC//wMAAAAGAAQAAADA/wMAAAAFAAQAAADB/wMAAAAFAAQAAADC/wMAAAAFAAQAAADD/wMAAAAFAAQAAAC//wQAAAAGAAYAAAC//wUAAAAGAAYAAAC//wYAAAAGAAYAAAC//wcAAAAGAAYAAAC//wgAAAAGAAYAAAC//wkAAAAGAAYAAAC//woAAAAGAAYAAADE/wMAAAAGAAQAAADE/wQAAAAGAAYAAADE/wUAAAAGAAYAAADE/wYAAAAGAAYAAADE/wcAAAAGAAYAAADE/wgAAAAGAAYAAADE/wkAAAAGAAYAAADE/woAAAAGAAYAAADF/wMAAAAFAAQAAADG/wMAAAAFAAQAAADH/wMAAAAFAAQAAADI/wMAAAAFAAQAAADJ/wMAAAAGAAQAAADJ/wQAAAAGAAYAAADJ/wUAAAAGAAYAAADJ/wYAAAAGAAYAAADJ/wcAAAAGAAYAAADJ/wgAAAAGAAYAAADJ/wkAAAAGAAYAAADJ/woAAAAGAAYAAADK/wMAAAAFAAQAAADL/wMAAAAFAAQAAADM/wMAAAAFAAQAAADN/wMAAAAFAAQAAADO/wMAAAAGAAQAAADO/wQAAAAGAAYAAADO/wUAAAAGAAYAAADO/wYAAAAGAAYAAADO/wcAAAAGAAYAAADO/wgAAAAGAAYAAADO/wkAAAAGAAYAAADO/woAAAAGAAYAAAA=")
-tile_set = ExtResource("4_v158k")
-
-[node name="Main" type="Node" parent="World/Map"]
-
-[node name="Player" parent="World/Map/Main" instance=ExtResource("3_wrm1d")]
+[node name="Player" parent="World/Main" instance=ExtResource("3_wrm1d")]
+z_index = 2
 position = Vector2(-1345, 353)
 jump_velocity = -800.0
 
-[node name="Respawn" type="Node" parent="World/Map"]
-
-[node name="RespawnPoint2" parent="World/Map/Respawn" instance=ExtResource("5_wowpa")]
-position = Vector2(-1347, 261)
-scale = Vector2(9.16173, 7.8975654)
-
-[node name="RespawnPoint3" parent="World/Map/Respawn" instance=ExtResource("5_wowpa")]
-position = Vector2(-414, 349)
-scale = Vector2(2.1451085, 4.964763)
-
-[node name="RespawnPoint4" parent="World/Map/Respawn" instance=ExtResource("5_wowpa")]
-position = Vector2(796.9999, 349)
-scale = Vector2(2.1451085, 4.964763)
-
-[node name="RespawnPoint5" parent="World/Map/Respawn" instance=ExtResource("5_wowpa")]
-position = Vector2(2457, 349)
-scale = Vector2(2.1451085, 4.964763)
-
-[node name="RespawnPoint6" parent="World/Map/Respawn" instance=ExtResource("5_wowpa")]
-position = Vector2(6114, -164)
-scale = Vector2(2.1451085, 4.964763)
-
-[node name="Trap" type="Node" parent="World/Map"]
-
-[node name="Spikes" parent="World/Map/Trap" instance=ExtResource("6_i6g32")]
-position = Vector2(3204, 447.00006)
-scale = Vector2(1.9932588, 1.7728455)
-
-[node name="Spikes2" parent="World/Map/Trap" instance=ExtResource("6_i6g32")]
-position = Vector2(3331, 447.00006)
-scale = Vector2(1.9932588, 1.7728455)
-
-[node name="Spikes3" parent="World/Map/Trap" instance=ExtResource("6_i6g32")]
-position = Vector2(3075, 447.00006)
-scale = Vector2(1.9932588, 1.7728455)
-
-[node name="DeathZone" parent="World/Map/Trap" instance=ExtResource("8_v158k")]
-position = Vector2(-22, 977)
-scale = Vector2(1305.484, 3)
-
-[node name="DeathZone3" parent="World/Map/Trap" instance=ExtResource("8_v158k")]
-position = Vector2(11007, 71.00001)
-scale = Vector2(500, 1.146)
-
-[node name="MovingPlatform" parent="World/Map/Trap" instance=ExtResource("4_3dryh")]
-position = Vector2(4066, 533)
-
-[node name="MovingPlatform2" parent="World/Map/Trap" instance=ExtResource("4_3dryh")]
-position = Vector2(5777, 23)
-rotation = 3.1415927
-
-[node name="Ennemy" parent="." instance=ExtResource("4_1l0tm")]
-position = Vector2(7625, -534)
+[node name="level 1" parent="World" node_paths=PackedStringArray("world_manager") instance=ExtResource("3_3dryh")]
+world_manager = NodePath("..")
