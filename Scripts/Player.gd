@@ -40,7 +40,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	anchor.look_at(get_global_mouse_position())
 	#Attack
-	if Input.is_action_pressed("Attack"):
+	if Input.is_action_pressed("Attack") and can_attack:
 		animator.play("attack")
 		_Attack()
 
