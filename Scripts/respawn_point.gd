@@ -8,7 +8,7 @@ func _on_area_entered(body: Node2D) -> void:
 	player = body
 	player.respawn = self
 	_is_checkpoint_active = true
-	print(name, _is_checkpoint_active)
+	print(name)
 	
 func _respawn() -> void:
 	player.global_position = global_position
