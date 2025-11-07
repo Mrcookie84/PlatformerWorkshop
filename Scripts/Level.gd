@@ -25,3 +25,7 @@ func do_player_spawn(transition: SceneTransitionRequest) -> void:
 	var entry_point : EntryPoint = entry_points.filter(func(a:EntryPoint): a.name == transition.future_spawn_point_id)[0]
 
 	player.position = entry_point.position
+
+
+func _on_area_2d_body_entered(body: CharacterBody2D) -> void:
+	

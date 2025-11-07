@@ -73,6 +73,7 @@ text = "Quit"
 icon = ExtResource("4_dibtv")
 
 [node name="ImageOption" type="TextureRect" parent="."]
+visible = false
 self_modulate = Color(0.39688927, 0.39688927, 0.39688924, 1)
 layout_mode = 1
 anchors_preset = 15
