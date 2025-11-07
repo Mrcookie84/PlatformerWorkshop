@@ -1,12 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://dhawyeobqieal"]
 
 [ext_resource type="Script" uid="uid://degaf0k8bj3y5" path="res://Scripts/world_manager.gd" id="2_3dryh"]
-[ext_resource type="PackedScene" uid="uid://dahkh005pl10l" path="res://Scenes/level1.tscn" id="3_3dryh"]
+[ext_resource type="PackedScene" uid="uid://benm4vjclxloe" path="res://Scenes/leveltuto.tscn" id="3_3dryh"]
 [ext_resource type="PackedScene" uid="uid://2w0343gbnmdk" path="res://Scenes/player.tscn" id="3_wrm1d"]
 
 [node name="World" type="Node2D" node_paths=PackedStringArray("current_level", "player")]
 script = ExtResource("2_3dryh")
-current_level = NodePath("level 1")
+current_level = NodePath("Main/Map")
 player = NodePath("Main/Player")
 metadata/_custom_type_script = "uid://degaf0k8bj3y5"
 
@@ -17,5 +17,5 @@ z_index = 2
 position = Vector2(-1345, 353)
 jump_velocity = -800.0
 
-[node name="level 1" parent="." node_paths=PackedStringArray("world_manager") instance=ExtResource("3_3dryh")]
-world_manager = NodePath("..")
+[node name="Map" parent="Main" node_paths=PackedStringArray("world_manager") instance=ExtResource("3_3dryh")]
+world_manager = NodePath("../..")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://dahkh005pl10l"]
+[gd_scene load_steps=16 format=4 uid="uid://benm4vjclxloe"]
 
 [ext_resource type="Script" uid="uid://bl4n28m7ygow5" path="res://Scripts/Level.gd" id="1_2a60c"]
 [ext_resource type="TileSet" uid="uid://bgld3llibqm14" path="res://Assets/TileMapTerrain.tres" id="1_didp7"]
@@ -25,11 +25,11 @@ seamless = true
 [sub_resource type="Resource" id="Resource_bs12r"]
 script = ExtResource("9_rqhku")
 future_spawn_point_id = &"Spawn"
-scene_to_transition = "uid://d4bc4vtb3hipt"
+scene_to_transition = "uid://dahkh005pl10l"
 metadata/_custom_type_script = "uid://dbya25w5hlppx"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1b78"]
-size = Vector2(117, 571)
+size = Vector2(987.5, 2273.5)
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_2a60c")
@@ -124,5 +124,5 @@ metadata/_custom_type_script = "uid://6kpqmtp3xno1"
 transition_request = SubResource("Resource_bs12r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTransitor2"]
-position = Vector2(-766, 421.5)
+position = Vector2(8560.25, 181.25)
 shape = SubResource("RectangleShape2D_u1b78")
