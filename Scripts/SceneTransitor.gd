@@ -12,4 +12,3 @@ func _ready() -> void:
 func _on_player_enter(_body_rid: RID, body: Node2D, _body_shape_index: int, _local_shape_index: int) -> void:
 	if (body.is_in_group("player")):
 		player_transition_request.emit(transition_request)
-
