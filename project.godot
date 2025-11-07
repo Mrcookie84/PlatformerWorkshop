@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PlatformerWorkshop"
-run/main_scene="uid://dhawyeobqieal"
+run/main_scene="uid://cgcwsdfwnee4i"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://Art/Sprite/icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://Art/Sprite/icon.svg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -29,6 +30,9 @@ project/assembly_name="PlatformerWorkshop"
 [global_group]
 
 obstacles=""
+enemies=""
+player=""
+player_attack=""
 
 [input]
 

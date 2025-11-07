@@ -186,6 +186,7 @@ texture_region_size = Vector2i(128, 128)
 6:6/0 = 0
 6:6/0/terrain_set = 0
 6:6/0/terrain = 0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-23, -64, -23, 64, 22.314049, 64, 22.314049, -64)
 6:6/0/terrains_peering_bit/right_side = 0
 6:6/0/terrains_peering_bit/bottom_right_corner = 0
 6:6/0/terrains_peering_bit/bottom_side = 0
@@ -410,10 +411,12 @@ texture_region_size = Vector2i(128, 128)
 1:10/0/terrains_peering_bit/top_left_corner = 0
 1:10/0/terrains_peering_bit/top_side = 0
 1:10/0/terrains_peering_bit/top_right_corner = 0
+6:1/0 = 0
 
 [resource]
 tile_size = Vector2i(128, 128)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 5
 physics_layer_1/collision_layer = 2
 physics_layer_1/collision_mask = 2
 terrain_set_0/mode = 0

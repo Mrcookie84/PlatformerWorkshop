@@ -4,23 +4,25 @@
 [ext_resource type="Texture2D" uid="uid://1i112jgjiwam" path="res://Art/Sprite/neutral_projectile.png" id="3_6t5aa"]
 [ext_resource type="Script" path="res://Scripts/rig.gd" id="3_fkybt"]
 [ext_resource type="PackedScene" uid="uid://cdu20anxc8cjp" path="res://Scenes/attack.tscn" id="3_h4iuc"]
-[ext_resource type="Texture2D" uid="uid://do10pwbxw1h46" path="res://Art/mew/Sprite-0007-walk-2.png" id="5_8erm5"]
+[ext_resource type="Texture2D" uid="uid://do10pwbxw1h46" path="res://Art/Sprite/mew/Sprite-0007-walk-2.png" id="5_8erm5"]
 [ext_resource type="PackedScene" uid="uid://4qox140xfhaq" path="res://Scenes/ui.tscn" id="5_fkybt"]
-[ext_resource type="Texture2D" uid="uid://t5vsh85eiptl" path="res://Art/mew/Sprite-0007-walk.png" id="6_f1ek2"]
-[ext_resource type="Texture2D" uid="uid://bvlgp81mqgflr" path="res://Art/mew/Sprite-0007.png" id="7_tx1dd"]
-[ext_resource type="Texture2D" uid="uid://bqwjfj5ovokal" path="res://Art/mew/Sprite-0001.png" id="8_h4iuc"]
-[ext_resource type="Texture2D" uid="uid://2fkuvussknm4" path="res://Art/mew/Sprite-0002.png" id="9_fd4e3"]
-[ext_resource type="Texture2D" uid="uid://pqc1idp11ci6" path="res://Art/mew/Sprite-0003.png" id="10_qqcod"]
-[ext_resource type="Texture2D" uid="uid://cmsx3jgxtkp03" path="res://Art/mew/Sprite-0005.png" id="12_fs7ks"]
-[ext_resource type="Texture2D" uid="uid://dpld6vtvtvh1b" path="res://Art/mew/Sprite-0006.png" id="13_l6n3p"]
-[ext_resource type="Texture2D" uid="uid://dxu05hn00k5e4" path="res://Art/mew/Sprite-0004-attack.png" id="14_olqyp"]
-[ext_resource type="Texture2D" uid="uid://uxcnlah4ya86" path="res://Art/mew/Sprite-idle.png" id="15_fd4e3"]
+[ext_resource type="Texture2D" uid="uid://t5vsh85eiptl" path="res://Art/Sprite/mew/Sprite-0007-walk.png" id="6_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://bvlgp81mqgflr" path="res://Art/Sprite/mew/Sprite-0007.png" id="7_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://bqwjfj5ovokal" path="res://Art/Sprite/mew/Sprite-0001.png" id="8_h4iuc"]
+[ext_resource type="Texture2D" uid="uid://2fkuvussknm4" path="res://Art/Sprite/mew/Sprite-0002.png" id="9_fd4e3"]
+[ext_resource type="Texture2D" uid="uid://pqc1idp11ci6" path="res://Art/Sprite/mew/Sprite-0003.png" id="10_qqcod"]
+[ext_resource type="Texture2D" uid="uid://cmsx3jgxtkp03" path="res://Art/Sprite/mew/Sprite-0005.png" id="12_fs7ks"]
+[ext_resource type="Texture2D" uid="uid://dpld6vtvtvh1b" path="res://Art/Sprite/mew/Sprite-0006.png" id="13_l6n3p"]
+[ext_resource type="Texture2D" uid="uid://dxu05hn00k5e4" path="res://Art/Sprite/mew/Sprite-0004-attack.png" id="14_olqyp"]
+[ext_resource type="Texture2D" uid="uid://uxcnlah4ya86" path="res://Art/Sprite/mew/Sprite-idle.png" id="15_fd4e3"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wxu4w"]
-radius = 144.08678
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h4iuc"]
+radius = 87.0
+height = 280.0
 
-[sub_resource type="Animation" id="Animation_h4iuc"]
-resource_name = "attack"
+[sub_resource type="Animation" id="Animation_qqcod"]
+resource_name = "idle"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -28,7 +30,23 @@ tracks/0/path = NodePath("Rig/Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.40000004, 0.5, 0.6),
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_h4iuc"), ExtResource("9_fd4e3"), ExtResource("15_fd4e3"), ExtResource("8_h4iuc")]
+}
+
+[sub_resource type="Animation" id="Animation_h4iuc"]
+resource_name = "attack"
+length = 0.43333668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rig/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333336, 0.2, 0.26666668, 0.33333334, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("8_h4iuc"), ExtResource("9_fd4e3"), ExtResource("10_qqcod"), ExtResource("14_olqyp"), ExtResource("10_qqcod"), ExtResource("9_fd4e3"), ExtResource("8_h4iuc")]
@@ -51,6 +69,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_pu2lt"]
 resource_name = "walking"
+length = 1.0000033
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -59,26 +78,10 @@ tracks/0/path = NodePath("Rig/Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.099999994, 0.19999999, 0.3, 0.33333334, 0.43333334, 0.5333333, 0.6333333, 0.6666667, 0.7666667, 0.8666666, 0.96666664),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("5_8erm5"), ExtResource("6_f1ek2"), ExtResource("7_tx1dd"), ExtResource("5_8erm5")]
-}
-
-[sub_resource type="Animation" id="Animation_qqcod"]
-resource_name = "idle"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Rig/Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("8_h4iuc"), ExtResource("9_fd4e3"), ExtResource("15_fd4e3"), ExtResource("8_h4iuc")]
+"values": [ExtResource("5_8erm5"), ExtResource("6_f1ek2"), ExtResource("7_tx1dd"), ExtResource("5_8erm5"), ExtResource("5_8erm5"), ExtResource("6_f1ek2"), ExtResource("7_tx1dd"), ExtResource("5_8erm5"), ExtResource("5_8erm5"), ExtResource("6_f1ek2"), ExtResource("7_tx1dd"), ExtResource("5_8erm5")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ukyrk"]
@@ -93,8 +96,10 @@ _data = {
 texture_filter = 1
 collision_mask = 6
 script = ExtResource("1_fobbg")
+max_health = 10
 health_bar = NodePath("UI/healthbar")
 DashTimer = NodePath("DashTimer")
+pogo_velocity = -400.0
 anchor = NodePath("Rig/projectileAnchor")
 marker = NodePath("Rig/projectileAnchor/bulletEmplacement")
 attack_timer = NodePath("AttackTimer")
@@ -124,7 +129,8 @@ scale = Vector2(6, 6)
 texture = ExtResource("8_h4iuc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_wxu4w")
+position = Vector2(-14, 0)
+shape = SubResource("CapsuleShape2D_h4iuc")
 
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 0.1

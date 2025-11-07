@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 @export_group("Base_stats")
-@export var health:int = 3
+var health:int = 3
 @export var max_health:int = 3
 @export var health_bar:ProgressBar
 
@@ -18,6 +18,7 @@ var can_double_jump:bool = false
 var can_sprint:bool = true
 var sprint_can_be_true:bool = true
 @export var DashTimer: Timer
+@export var pogo_velocity:float
 
 @export_group("Attack_param")
 @export var anchor: Node2D
@@ -39,7 +40,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	anchor.look_at(get_global_mouse_position())
 	#Attack
-	if Input.is_action_pressed("Attack"):
+	if Input.is_action_pressed("Attack") and can_attack:
 		animator.play("attack")
 		_Attack()
 
@@ -102,7 +103,8 @@ func _physics_process(delta: float) -> void:
 	if is_on_wall():
 		velocity.x /= 1.25
 		
-	
+	if velocity.y < -400:
+		velocity.y = -400
 	# Applique le mouvement
 	move_and_slide()
 
@@ -118,7 +120,7 @@ func _Attack() -> void:
 func _on_attack_timer_timeout() -> void:
 	can_attack = true
 
-func _take_damage(damage: int):
+func take_damage(damage: int):
 	health = max(0, health - damage)
 	_update_health_bar()
 	if health == 0:
@@ -137,5 +139,14 @@ func _on_dash_timer_timeout() -> void:
 
 
 func _on_attack_pogo() -> void:
-	print("boop")
-	velocity += Vector2.UP * jump_velocity
+	print("enter pogo")
+	if get_local_mouse_position().y < 0:	
+		return
+	
+	velocity += (Vector2.DOWN * pogo_velocity)
+	print("force applied")
+	
+	if !sprint_can_be_true :
+		can_sprint = true
+	if !can_double_jump:
+		can_double_jump = true

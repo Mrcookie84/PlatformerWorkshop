@@ -5,4 +5,4 @@ var _curent_target: Player
 
 func _on_body_entered(body: CharacterBody2D) -> void:
 	_curent_target = body
-	_curent_target._take_damage(damage)
+	_curent_target.take_damage(damage)
