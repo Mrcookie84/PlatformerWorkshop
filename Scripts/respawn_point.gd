@@ -4,7 +4,7 @@ extends Node2D
 var player:Player
 var _is_checkpoint_active: bool = false
 
-func _on_area_entered(body: Node2D) -> void:
+func _on_area_entered(body: CharacterBody2D) -> void:
 	player = body
 	player.respawn = self
 	_is_checkpoint_active = true

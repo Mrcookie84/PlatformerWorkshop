@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PlatformerWorkshop"
-run/main_scene="uid://dhawyeobqieal"
+run/main_scene="uid://cgcwsdfwnee4i"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://Art/Sprite/icon.svg"
 

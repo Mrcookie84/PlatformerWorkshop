@@ -1,0 +1,142 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgcwsdfwnee4i"]
+
+[ext_resource type="Script" uid="uid://co20g384026rc" path="res://Can copy from/Scripts/start_menu.gd" id="1_ufv5y"]
+[ext_resource type="Texture2D" uid="uid://dpkke72wc1p8r" path="res://Art/Sprite/test2.webp" id="2_ujd4t"]
+[ext_resource type="Texture2D" uid="uid://c4noo55dw8qy7" path="res://Art/Sprite/player_projectile.png" id="3_ql1sk"]
+[ext_resource type="Texture2D" uid="uid://bf77ctjn6fed8" path="res://Art/Sprite/enemy_projectile.png" id="4_dibtv"]
+[ext_resource type="Texture2D" uid="uid://bjtq57yj0mtrr" path="res://Art/Sprite/icon.svg" id="5_o6asp"]
+
+[node name="Control" type="Control" node_paths=PackedStringArray("play", "quit", "option_background")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ufv5y")
+play = NodePath("Play")
+quit = NodePath("Quit")
+option_background = NodePath("ImageOption")
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(958.00006, 503.00006)
+scale = Vector2(1.908235, 1.1226121)
+texture = ExtResource("2_ujd4t")
+
+[node name="BehindTittle" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1011.00006, 93.00001)
+scale = Vector2(1.1808542, 0.31999522)
+texture = ExtResource("2_ujd4t")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 2.0
+offset_right = 2050.0
+offset_bottom = 345.0
+theme_override_font_sizes/font_size = 181
+text = "Poke-Parcour"
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -433.99994
+offset_top = 291.0
+offset_right = 691.0
+offset_bottom = 648.0
+grow_horizontal = 2
+scale = Vector2(0.87063247, 0.79838926)
+theme_override_font_sizes/font_size = 250
+text = "Play"
+icon = ExtResource("3_ql1sk")
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -421.99994
+offset_top = 708.0
+offset_right = 703.0
+offset_bottom = 1065.0
+grow_horizontal = 2
+scale = Vector2(0.87063247, 0.79838926)
+theme_override_font_sizes/font_size = 250
+text = "Quit"
+icon = ExtResource("4_dibtv")
+
+[node name="ImageOption" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(958.00006, 503.00006)
+scale = Vector2(1.908235, 1.1226121)
+texture = ExtResource("2_ujd4t")
+
+[node name="Test5" type="Sprite2D" parent="ImageOption"]
+modulate = Color(0.33660764, 0.3366076, 0.3366076, 1)
+texture = ExtResource("2_ujd4t")
+
+[node name="Label2" type="Label" parent="ImageOption"]
+offset_left = -460.6351
+offset_top = -318.0084
+offset_right = 1169.3649
+offset_bottom = 24.991608
+scale = Vector2(0.5210993, 0.61406916)
+theme_override_font_sizes/font_size = 181
+text = "Move : Q and D"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="ImageOption"]
+offset_left = -459.06302
+offset_top = -183.50069
+offset_right = 1170.937
+offset_bottom = 159.49931
+scale = Vector2(0.5210993, 0.61406916)
+theme_override_font_sizes/font_size = 181
+text = "Jump : Space"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="ImageOption"]
+offset_left = -464.82748
+offset_top = -47.211338
+offset_right = 1165.1725
+offset_bottom = 295.78864
+scale = Vector2(0.5210993, 0.61406916)
+theme_override_font_sizes/font_size = 181
+text = "Dash : Right shift"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label5" type="Label" parent="ImageOption"]
+offset_left = -463.25534
+offset_top = 73.93466
+offset_right = 1166.7446
+offset_bottom = 416.93466
+scale = Vector2(0.5210993, 0.61406916)
+theme_override_font_sizes/font_size = 181
+text = "Aim : Mouse"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label6" type="Label" parent="ImageOption"]
+offset_left = -464.30344
+offset_top = 188.84523
+offset_right = 1165.6965
+offset_bottom = 531.8452
+scale = Vector2(0.5210993, 0.61406916)
+theme_override_font_sizes/font_size = 181
+text = "Attack : Left click"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1699.0
+offset_top = 906.0
+offset_right = 1835.0
+offset_bottom = 1042.0
+scale = Vector2(1.2962068, 1.1359905)
+icon = ExtResource("5_o6asp")
+
+[connection signal="pressed" from="Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed_QUIT"]
+[connection signal="pressed" from="Option" to="." method="_on_option_pressed_OPTION"]

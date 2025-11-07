@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b7soybtka5pyv" path="res://Can copy from/Scenes/HeatlhBar.tscn" id="4_pi3ax"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c481b"]
-radius = 61.008198
+radius = 55.00909
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pi3ax"]
 size = Vector2(20, 9.393162)
