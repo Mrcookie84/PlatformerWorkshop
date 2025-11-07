@@ -1,14 +1,16 @@
-[gd_scene load_steps=14 format=4 uid="uid://4pxcplgji380"]
+[gd_scene load_steps=17 format=4 uid="uid://4pxcplgji380"]
 
 [ext_resource type="Script" uid="uid://bl4n28m7ygow5" path="res://Scripts/Level.gd" id="1_1x0xh"]
 [ext_resource type="TileSet" uid="uid://bgld3llibqm14" path="res://Assets/TileMapTerrain.tres" id="2_h3ll2"]
-[ext_resource type="PackedScene" uid="uid://2w0343gbnmdk" path="res://Scenes/player.tscn" id="3_csbjj"]
 [ext_resource type="Script" uid="uid://dxlvbc0hkv7sa" path="res://Scenes/Ending.gd" id="3_h3ll2"]
 [ext_resource type="PackedScene" uid="uid://22j46sg0umaj" path="res://Scenes/respawn_point.tscn" id="4_h6p24"]
 [ext_resource type="PackedScene" uid="uid://wxpsautupfoo" path="res://Scenes/spikes.tscn" id="5_vn7r1"]
 [ext_resource type="PackedScene" uid="uid://4h632heonow7" path="res://Scenes/death_zone.tscn" id="6_vwkqt"]
 [ext_resource type="PackedScene" uid="uid://d12t8yeh4x5p4" path="res://Scenes/ennemy.tscn" id="7_fpsp3"]
 [ext_resource type="PackedScene" uid="uid://dfu526pw0u2rg" path="res://Scenes/moving_platform.tscn" id="8_wffsm"]
+[ext_resource type="PackedScene" uid="uid://b3fhfpkpr70pg" path="res://Scenes/scene_transitor.tscn" id="10_csbjj"]
+[ext_resource type="Script" uid="uid://dbya25w5hlppx" path="res://Scripts/SceneTransitionRequest.gd" id="11_h6p24"]
+[ext_resource type="Script" uid="uid://6kpqmtp3xno1" path="res://Scripts/EntryPoint.gd" id="11_vn7r1"]
 
 [sub_resource type="Gradient" id="Gradient_1l0tm"]
 colors = PackedColorArray(1, 1, 1, 1, 0.24064352, 0.54899037, 1.353256, 0)
@@ -22,7 +24,15 @@ color_ramp = SubResource("Gradient_1l0tm")
 seamless = true
 seamless_blend_skirt = 1.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_csbjj"]
+[sub_resource type="Resource" id="Resource_vn7r1"]
+script = ExtResource("11_h6p24")
+future_spawn_point_id = &"credit"
+scene_to_transition = "uid://g35l071tn65q"
+metadata/_custom_type_script = "uid://dbya25w5hlppx"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h6p24"]
+radius = 80.0
+height = 342.0
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_1x0xh")
@@ -52,17 +62,6 @@ tile_set = ExtResource("2_h3ll2")
 
 [node name="Main" type="Node" parent="."]
 script = ExtResource("3_h3ll2")
-
-[node name="Player" parent="Main" instance=ExtResource("3_csbjj")]
-position = Vector2(-3825, 670)
-jump_velocity = -800.0
-
-[node name="Area2D" type="Area2D" parent="Main"]
-position = Vector2(3042, 1894)
-scale = Vector2(9.48, 9.48)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Main/Area2D"]
-shape = SubResource("CapsuleShape2D_csbjj")
 
 [node name="Respawn" type="Node" parent="."]
 
@@ -182,4 +181,15 @@ position = Vector2(-3029, 258)
 position = Vector2(-2644, 592)
 scale = Vector2(-1, 1)
 
-[connection signal="body_entered" from="Main/Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="SceneTransitor" parent="." instance=ExtResource("10_csbjj")]
+position = Vector2(3006, 1870)
+transition_request = SubResource("Resource_vn7r1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTransitor"]
+position = Vector2(27, 8)
+shape = SubResource("CapsuleShape2D_h6p24")
+
+[node name="Spawn" type="Marker2D" parent="."]
+position = Vector2(-3850, 582)
+script = ExtResource("11_vn7r1")
+metadata/_custom_type_script = "uid://6kpqmtp3xno1"

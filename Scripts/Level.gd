@@ -30,5 +30,3 @@ func do_player_spawn(transition: SceneTransitionRequest) -> void:
 	player.position = entry_point.position
 
 
-func _on_area_2d_body_entered(body: CharacterBody2D) -> void:
-	

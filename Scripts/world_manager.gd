@@ -23,8 +23,9 @@ func change_level(transition_request : SceneTransitionRequest) -> void :
 
 	level.world_manager = self
 	
-	remove_child(current_level)
+	current_level.queue_free()
 	add_child(level)
+	current_level = level
 
 	# make shit happens like player reposition and all
 	
