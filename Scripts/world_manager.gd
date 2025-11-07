@@ -19,15 +19,16 @@ func change_level(transition_request : SceneTransitionRequest) -> void :
 		await tree.process_frame
 
 	var level : Level = ResourceLoader.load_threaded_get(path).instantiate()
-
+	print(path)
 
 	level.world_manager = self
 	
 	current_level.queue_free()
-	add_child(level)
 	current_level = level
 
 	# make shit happens like player reposition and all
-	
 	level.player = player
+
+	add_child(level)
+
 	level.do_player_spawn(transition_request)
