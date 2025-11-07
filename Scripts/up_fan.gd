@@ -17,4 +17,4 @@ func _on_body_exited(body: Node2D) -> void:
 	
 func _physics_process(delta: float) -> void:
 	if target:
-		target.velocity += target_direction * SPEED * delta
+		target.velocity += -self.global_position * SPEED * delta

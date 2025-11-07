@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jl3su"]
 size = Vector2(180, 671)
 
-[node name="UpFan" type="Area2D"]
+[node name="Fan" type="Area2D"]
 collision_layer = 2
 script = ExtResource("1_7svmv")
 
