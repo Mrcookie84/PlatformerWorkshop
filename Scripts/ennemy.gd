@@ -41,7 +41,13 @@ func _process(delta: float) -> void:
 	if player_in_range:
 		var target_pos = Vector2(target.global_position.x, target.global_position.y)
 		global_position = global_position.move_toward(target_pos, speed * delta)
-	
+		
+	if target != null:
+		if target.position.x < self.position.x:
+			sprite.scale.x = -scale_stock
+		else:
+			sprite.scale.x = scale_stock
+		
 	if player_in_range and target:
 		anchor.look_at(target.global_position)
 	else:
@@ -67,7 +73,6 @@ func _update_health_bar():
 
 func _look_around() -> void:
 	
-		
 	if _is_dead:
 		return
 	if have_looked:
@@ -117,14 +122,15 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	player_in_range = true
 	target = body
 	if can_shoot:
-		look_at(target.global_position)
+		if target.position.x < self.position.x:
+			sprite.scale.x = -scale_stock
+		else:
+			sprite.scale.x = scale_stock
 		_fire_with_cooldown()
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	player_in_range = false
 	target = null
-	can_shoot = true
-	shoot_timer.stop()
 
 func _fire_with_cooldown() -> void:
 	_shoot()
@@ -133,7 +139,7 @@ func _fire_with_cooldown() -> void:
 	shoot_timer.start()
 
 func _on_shoot_timer_timeout() -> void:
-	if not player_in_range or not target:
+	if !player_in_range or !target:
 		can_shoot = true
 		return
 	_fire_with_cooldown()
