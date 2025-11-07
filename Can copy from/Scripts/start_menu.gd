@@ -3,7 +3,7 @@ extends Control
 @export_group("Buttons")
 @export var play:Button
 @export var quit:Button
-@export var option_background:Sprite2D
+@export var option_background:TextureRect
 
 var in_option:bool = false
 

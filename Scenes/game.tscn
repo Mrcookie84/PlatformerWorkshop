@@ -1,13 +1,23 @@
-[gd_scene load_steps=9 format=4 uid="uid://dhawyeobqieal"]
+[gd_scene load_steps=11 format=4 uid="uid://dhawyeobqieal"]
 
-[ext_resource type="Texture2D" uid="uid://0ohaeddae13g" path="res://Art/Sprite/tile.png" id="1_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://2w0343gbnmdk" path="res://Scenes/player.tscn" id="3_wrm1d"]
-[ext_resource type="PackedScene" uid="uid://d12t8yeh4x5p4" path="res://Scenes/ennemy.tscn" id="4_1l0tm"]
+[ext_resource type="PackedScene" uid="uid://bvpckijjf80xg" path="res://Scenes/ennemy.tscn" id="4_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://dfu526pw0u2rg" path="res://Scenes/moving_platform.tscn" id="4_3dryh"]
 [ext_resource type="TileSet" uid="uid://bgld3llibqm14" path="res://Assets/TileMapTerrain.tres" id="4_v158k"]
 [ext_resource type="PackedScene" uid="uid://22j46sg0umaj" path="res://Scenes/respawn_point.tscn" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://wxpsautupfoo" path="res://Scenes/spikes.tscn" id="6_i6g32"]
 [ext_resource type="PackedScene" uid="uid://4h632heonow7" path="res://Scenes/death_zone.tscn" id="8_v158k"]
+
+[sub_resource type="Gradient" id="Gradient_1l0tm"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0.2, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_v158k"]
+frequency = 0.0042
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_h4fw4"]
+noise = SubResource("FastNoiseLite_v158k")
+color_ramp = SubResource("Gradient_1l0tm")
+seamless = true
 
 [node name="Game" type="Node"]
 
@@ -23,10 +33,9 @@ scroll_scale = Vector2(1.25, 1.25)
 scroll_offset = Vector2(154, 38)
 
 [node name="BG" type="Sprite2D" parent="World/Map/Art/Parallax2D"]
-modulate = Color(0, 0, 0, 1)
 texture_repeat = 2
 position = Vector2(-65, 40)
-texture = ExtResource("1_qxrlw")
+texture = SubResource("NoiseTexture2D_h4fw4")
 region_enabled = true
 region_rect = Rect2(-8561.966, -5229, 10000.508, 10000)
 
