@@ -1,15 +1,15 @@
 [gd_scene load_steps=10 format=3 uid="uid://d12t8yeh4x5p4"]
 
 [ext_resource type="Script" uid="uid://bno1usl0nv4xo" path="res://Scripts/ennemy.gd" id="1_1b0bn"]
-[ext_resource type="Texture2D" uid="uid://i50xmc0iwdm6" path="res://Art/Sprite/eevee.png" id="2_hhwew"]
+[ext_resource type="Texture2D" uid="uid://h7xmmxep44xw" path="res://Art/Sprite/Sprite_0093_DP.png" id="2_pi3ax"]
 [ext_resource type="Texture2D" uid="uid://1i112jgjiwam" path="res://Art/Sprite/neutral_projectile.png" id="3_ucqlk"]
 [ext_resource type="PackedScene" uid="uid://b7soybtka5pyv" path="res://Can copy from/Scenes/HeatlhBar.tscn" id="4_pi3ax"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c481b"]
-radius = 55.00909
+radius = 61.68468
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pi3ax"]
-size = Vector2(20, 9.393162)
+size = Vector2(20, 16.803322)
 
 [sub_resource type="Animation" id="Animation_1b0bn"]
 resource_name = "Death"
@@ -74,6 +74,7 @@ _data = {
 [node name="Ennemy" type="CharacterBody2D" node_paths=PackedStringArray("health_bar", "anchor", "marker", "shoot_timer", "look_timer", "sprite") groups=["enemies"]]
 collision_layer = 4
 collision_mask = 3
+motion_mode = 1
 script = ExtResource("1_1b0bn")
 health_bar = NodePath("ProgressBar")
 anchor = NodePath("Sprite2D/projectileAnchor")
@@ -85,7 +86,7 @@ speed = 250.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(-2.25, 2.25)
-texture = ExtResource("2_hhwew")
+texture = ExtResource("2_pi3ax")
 
 [node name="projectileAnchor" type="Node2D" parent="Sprite2D"]
 rotation = 3.1415927
@@ -99,7 +100,6 @@ position = Vector2(116, 0)
 texture = ExtResource("3_ucqlk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -13)
 shape = SubResource("CircleShape2D_c481b")
 
 [node name="ShootTimer" type="Timer" parent="."]
@@ -112,7 +112,6 @@ one_shot = true
 scale = Vector2(-50.184628, 47.907196)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -3.6737692)
 scale = Vector2(1, 0.9999999)
 shape = SubResource("RectangleShape2D_pi3ax")
 

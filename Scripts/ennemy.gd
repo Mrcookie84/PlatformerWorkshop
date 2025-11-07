@@ -39,7 +39,7 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	if player_in_range:
-		var target_pos = Vector2(target.global_position.x, global_position.y)
+		var target_pos = Vector2(target.global_position.x, target.global_position.y)
 		global_position = global_position.move_toward(target_pos, speed * delta)
 	
 	if player_in_range and target:
@@ -47,13 +47,18 @@ func _process(delta: float) -> void:
 	else:
 		_look_around()
 
-func _physics_process(_delta: float) -> void:
+
+func _physics_process(delta: float) -> void:
 	if not _current_target:
 		return
 	
-	var direction_to_player = global_position.direction_to(_current_target.global_position)
+	# --- Gravité
+	velocity.y += get_gravity().y * delta
+
+	var direction_to_player = sign(_current_target.global_position - global_position)
+	velocity.x = direction_to_player * speed
 	
-	velocity = direction_to_player * speed
+
 	move_and_slide()
 
 func _update_health_bar():

@@ -16,8 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://dxu05hn00k5e4" path="res://Art/Sprite/mew/Sprite-0004-attack.png" id="14_olqyp"]
 [ext_resource type="Texture2D" uid="uid://uxcnlah4ya86" path="res://Art/Sprite/mew/Sprite-idle.png" id="15_fd4e3"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wxu4w"]
-radius = 144.08678
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h4iuc"]
+radius = 87.0
+height = 280.0
 
 [sub_resource type="Animation" id="Animation_qqcod"]
 resource_name = "idle"
@@ -127,7 +128,8 @@ scale = Vector2(6, 6)
 texture = ExtResource("8_h4iuc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_wxu4w")
+position = Vector2(-14, 0)
+shape = SubResource("CapsuleShape2D_h4iuc")
 
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 0.1
